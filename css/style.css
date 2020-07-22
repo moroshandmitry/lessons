@@ -6,6 +6,11 @@ ul {
     list-style: none;
     max-height: 750px;
     overflow: auto;
+    cursor: pointer;
+}
+
+li:hover {
+    background: grey;
 }
 
 a {
@@ -17,12 +22,14 @@ a {
 }
 
 a:hover {
+    text-decoration: none;
     color: rgb(0, 177, 138);
 
 }
 
 .lessons {
-    max-width: 420px;
+    max-width: 720px;
+    min-width: 320px;
     margin: 0 auto;
 }
 
