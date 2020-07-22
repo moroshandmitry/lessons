@@ -1,5 +1,6 @@
 body {
-    background: rgb(228, 221, 221);
+    background: linear-gradient(white, #D3D8E8);
+
 }
 
 ul {
@@ -7,10 +8,11 @@ ul {
     max-height: 750px;
     overflow: auto;
     cursor: pointer;
+    padding: 0;
 }
 
 li:hover {
-    background: grey;
+    background: #fff;
 }
 
 a {
@@ -23,19 +25,21 @@ a {
 
 a:hover {
     text-decoration: none;
-    color: rgb(0, 177, 138);
+    color: #3b5998;
 
 }
 
 .lessons {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
     max-width: 720px;
     min-width: 320px;
-    margin: 0 auto;
 }
 
 .lesson {
-    background: silver;
-    border: 5px solid grey;
+    background: #d2d9e8;
+    border: 5px solid #4267b2;
     border-radius: 20px;
     text-align: center;
     padding: 7px;
