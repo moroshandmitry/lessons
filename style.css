@@ -1,0 +1,30 @@
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    color: black;
+
+}
+
+a:hover {
+    color: red;
+
+}
+
+.lessons {
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+.lesson {
+    background: silver;
+    border: 5px solid grey;
+    border-radius: 20px;
+    text-align: center;
+    padding: 7px;
+    margin-top: 20px;
+}
