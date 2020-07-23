@@ -1,3 +1,16 @@
-body {
-    background: silver;
+.container {
+    margin: 0 auto;
+    max-width: 1080px;
+    background: rgb(251, 251, 225);
+    padding: 20px;
+}
+
+table, td, th {
+    border: 1px solid grey;
+}
+
+input, select, button {
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
 }

@@ -3,15 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lesson 2</title>
+    <title>Lesson 2 HTML tags</title>
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="/Lesson 2/css/style.css">
 </head>
 <body>
 
-    Урок 2
+    <div class="container">
 
-    <script src="js/bootstrap.js"></script>
+    <p>ul>li*3>lorem3</p>
+
+    <ul>
+        <li>Lorem, ipsum dolor.</li>
+        <li>Vitae, harum omnis.</li>
+        <li>Rerum, quam voluptatem!</li>
+    </ul>
+
+    <p>ol>li*3>lorem2</p>
+
+    <ol start="2">
+        <li>Lorem, ipsum.</li> <!-- Этот li будет вторым -->
+        <li>Nemo, eveniet!</li>
+        <li>Sint, at?</li>
+    </ol>
+
+
+    <p>table>tr*3>td*3>lorem2</p>
+
+    <table>
+        <tr>
+            <th>Lorem, ipsum.</th>
+            <th>Nesciunt, obcaecati.</th>
+            <th>Quam, alias?</th>
+        </tr>
+        <tr>
+            <td>Ea, debitis?</td>
+            <td>Tenetur, quibusdam?</td>
+            <td>Ea, dolor.</td>
+        </tr>
+        <tr>
+            <td>Totam, perspiciatis?</td>
+            <td>Dicta, ipsa!</td>
+            <td>Deserunt, omnis?</td>
+        </tr>
+    </table>
+
+    <p>Next table with colspan="2" and rowspan="2"</p>
+
+    <table>
+        <tr>
+            <td colspan="2">Lorem, ipsum.</td> <!-- colspan="2" занимает 2 ячейки -->
+            <td>Quam, alias?</td>
+        </tr>
+        <tr>
+            <td>Ea, debitis?</td>
+            <td rowspan="2">Tenetur, quibusdam?</td>
+            <td>Ea, dolor.</td>
+        </tr>
+        <tr>
+            <td>Totam, perspiciatis?</td>
+            <td>Deserunt, omnis?</td>
+        </tr>
+    </table>
+
+    <form action="app.php" method="GET">
+        <input type="text" name="login" value="">
+        <input type="password" name="pass" id="pass">
+        <input type="submit" value="Click me">
+    </form>
+
+    <p>form - используют для отправки данных на сервер</p>
+    <p>action="" для url app.php к примеру</p>
+    <p>Путь к приложению</p>
+    <p>method="" тип передачи данных для формы</p>
+    <p>GET - получить доступ к ссылки</p>
+    <p>получает текстовые данные</p>
+    <p>value="Hello" - заполнить input - Hello</p>
+    <p>не найдёт app.php так как я его не создавал</p>
+
+
+    
+    <form action="app.php" method="GET">
+        <input type="text" name="login" value="">
+        <input type="password" name="pass" id="pass" required>
+        <input type="submit" value="Click me">
+        <input type="reset" value="Clear">
+        <textarea name="memo" id="memo" cols="30" rows="10"></textarea>
+        <select name="select">
+            <option value="s1">-Select a Page-</option>
+            <option value="s2">Home page</option>
+            <option value="s3">About Us</option>
+            <option value="s4">Camping Tips</option>
+        </select>
+        <button type="submit">type="submit"</button>
+        <button type="button" onclick="alert(pass.value)">type="button"</button>
+    
+    </form>
+
+    <p>405 не нашёл на серваке app.php</p>
+    <p>POST - открывает отдельные данные с серваком</p>
+    <p>видосы картинки на аватарку</p>
+    <p>required - этот атрибуд является обязательным ДЛЯ ЗАПОЛНЕНИЯ без него не пройдёт валидация</p>
+    <p>type="reset" value="Clear" - очистить форму</p>
+    
+    <p>onclick="alert(pass.value)" - отобразит пароль</p>
+    
+    
+    <form action="app.php" method="GET">
+        <input type="text" name="login" value="" placeholder="Please input your login" autofocus="autofocus" autocomplete="off">
+        <input type="password" name="pass" id="pass" required>
+        <input type="number" name="number">
+        <input type="submit" value="Click me">
+        <p>pattern тут поюзать</p>
+    </form>
+
+    autofocus="autofocus" - фокус на форму чтоб ввести
+    autocomplete="on | off" - убить автозаполнение
+    
+    
+    </div>
+
 </body>
 </html>
