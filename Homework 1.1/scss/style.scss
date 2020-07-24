@@ -1,3 +1,5 @@
+$sideAside: #5992d7;
+
 * {
     padding: 0;
     margin: 0;
@@ -35,13 +37,14 @@ h1 {
     .big-content {
         display: flex;
         flex-wrap: wrap;
+        height: 591px;
 
         .sidebar {
             display: flex;
             flex-grow: 1;
             max-width: 25%;
             flex-direction: column;
-            background: #5992d7;
+            background: $sideAside;
             padding: 25px;
             box-sizing: border-box;
 
@@ -78,7 +81,7 @@ h1 {
             max-width: 25%;
             flex-grow: 1;
             flex-direction: column;
-            background: #b1d0b0;
+            background: $sideAside;
             padding: 25px;
 
             .events {
@@ -97,7 +100,7 @@ h1 {
     .footer {
         display: flex;
         flex-direction: row;
-        background: #68be65;
+        background: #b1d0b0;
         padding: 15px;
     }
 

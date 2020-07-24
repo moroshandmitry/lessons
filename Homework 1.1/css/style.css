@@ -33,6 +33,7 @@ h1 {
 .container .big-content {
   display: flex;
   flex-wrap: wrap;
+  height: 591px;
 }
 .container .big-content .sidebar {
   display: flex;
@@ -69,7 +70,7 @@ h1 {
   max-width: 25%;
   flex-grow: 1;
   flex-direction: column;
-  background: #b1d0b0;
+  background: #5992d7;
   padding: 25px;
 }
 .container .big-content .aside .events {
@@ -83,7 +84,7 @@ h1 {
 .container .footer {
   display: flex;
   flex-direction: row;
-  background: #68be65;
+  background: #b1d0b0;
   padding: 15px;
 }
 
