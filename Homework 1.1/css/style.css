@@ -33,16 +33,19 @@ h1 {
 }
 .container .big-content .sidebar {
   display: flex;
+  flex-grow: 1;
   flex-direction: column;
   background: #5992d7;
 }
 .container .big-content .content {
   display: flex;
+  flex-grow: 4;
   flex-direction: column;
   background: #96b4da;
 }
 .container .big-content .aside {
   display: flex;
+  flex-grow: 1;
   flex-direction: column;
   background: #b1d0b0;
 }
