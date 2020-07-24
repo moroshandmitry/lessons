@@ -1,3 +1,101 @@
-body {
-    background: silver;
+* {
+    padding: 0;
+    margin: 0;
+    color: #e3faff;
 }
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+.html-tag-header {
+    padding-left: 15px;
+    padding-top: 20px;
+}
+
+.html-tags {
+    padding-left: 15px;
+    padding-top: 5px;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1600px;
+    height: 100%;
+    
+
+    header {
+        background: #b1d0b0;
+        height: 80px;
+
+        .hero-header {
+            color: #FFF;
+        }
+    }
+
+    nav.nav-bar {
+        background: #68be65;
+        height: 50px;
+    }
+
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+
+        #sidebar {
+            background: #5992d7;
+            height: 600px;
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+
+            a {
+                padding-left: 15px;
+                padding-bottom: 5px;
+            }
+
+            .text-a:nth-child(2) {
+                margin-top: 50px;
+            }
+        }
+
+        #content {
+            background: #96b4da;
+            height: 600px;
+            width: 60%;
+                
+            .story {
+                padding: 15px;
+                
+            }
+        }
+
+        aside {
+            background: #5992d7;
+            height: 600px;
+            width: 20%;
+                
+            .events {
+                display: flex;
+                flex-direction: column;
+                padding: 15px;
+                margin-top: 50px;
+
+                a, .up-event {
+                    padding-bottom: 5px;
+                }
+            }
+        }
+    }
+    
+    footer {
+        background: #b1d0b0;
+        height: 59px;
+    }
+}
+
+
+
+
+
