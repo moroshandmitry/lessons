@@ -10,7 +10,7 @@ h1 {
 }
 
 .container {
-  max-width: 1600px;
+  max-width: 1366px;
   margin: 0 auto;
 }
 .container .hero-header {
@@ -34,7 +34,7 @@ h1 {
 }
 .container .big-content .sidebar {
   display: flex;
-  flex-grow: 1;
+  flex-grow: 1.5;
   flex-direction: column;
   background: #5992d7;
 }
@@ -46,7 +46,7 @@ h1 {
 }
 .container .big-content .aside {
   display: flex;
-  flex-grow: 1;
+  flex-grow: 1.5;
   flex-direction: column;
   background: #b1d0b0;
 }
