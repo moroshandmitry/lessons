@@ -87,3 +87,34 @@ h1 {
   background: #68be65;
   padding: 15px;
 }
+
+@media screen and (max-width: 420px) {
+  .big-content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .big-content .sidebar {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    background: #5992d7;
+    padding: 25px;
+    box-sizing: border-box;
+  }
+  .big-content .content {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    background: #96b4da;
+    padding: 25px;
+    box-sizing: border-box;
+  }
+  .big-content .aside {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    background: #b1d0b0;
+    padding: 25px;
+    box-sizing: border-box;
+  }
+}
