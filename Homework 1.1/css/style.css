@@ -10,7 +10,7 @@ h1 {
 }
 
 .container {
-  max-width: 1366px;
+  max-width: 1170px;
   margin: 0 auto;
 }
 .container .hero-header {
@@ -22,11 +22,13 @@ h1 {
   display: flex;
   flex-direction: row;
   color: #FFF;
+  padding: 15px;
 }
 .container .hero-header .nav-bar {
   display: flex;
   flex-direction: row;
   background: #68be65;
+  padding: 15px;
 }
 .container .big-content {
   display: flex;
@@ -34,24 +36,51 @@ h1 {
 }
 .container .big-content .sidebar {
   display: flex;
-  flex-grow: 1.5;
+  flex-grow: 1;
+  max-width: 25%;
   flex-direction: column;
   background: #5992d7;
+  padding: 25px;
+}
+.container .big-content .sidebar h3 {
+  margin-bottom: 50px;
+}
+.container .big-content .sidebar a {
+  margin-bottom: 5px;
 }
 .container .big-content .content {
   display: flex;
-  flex-grow: 4;
+  max-width: 50%;
+  flex-grow: 1;
   flex-direction: column;
   background: #96b4da;
+  padding: 25px;
+}
+.container .big-content .content .title-content {
+  margin-bottom: 20px;
+}
+.container .big-content .content .story {
+  margin-bottom: 5px;
 }
 .container .big-content .aside {
   display: flex;
-  flex-grow: 1.5;
+  max-width: 25%;
+  flex-grow: 1;
   flex-direction: column;
   background: #b1d0b0;
+  padding: 25px;
+}
+.container .big-content .aside .events {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.container .big-content .aside .events a, .container .big-content .aside .events h3 {
+  margin-bottom: 5px;
 }
 .container .footer {
   display: flex;
   flex-direction: row;
   background: #68be65;
+  padding: 15px;
 }
