@@ -3,14 +3,17 @@
     max-width: 1080px;
     background: rgb(251, 251, 225);
     padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
 }
 
 table, td, th {
     border: 1px solid grey;
 }
 
-input, select, button {
+input, select, button, textarea {
     display: flex;
     flex-direction: column;
-    margin: 15px;
+    padding: 5px;
+    margin: 5px;
 }

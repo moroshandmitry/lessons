@@ -88,7 +88,7 @@
         <input type="password" name="pass" id="pass" required>
         <input type="submit" value="Click me">
         <input type="reset" value="Clear">
-        <textarea name="memo" id="memo" cols="50" rows="5"></textarea>
+        <textarea name="memo" id="memo" cols="25" rows="5"></textarea>
         <select name="select">
             <option value="s1">-Select a Page-</option>
             <option value="s2">Home page</option>
@@ -96,7 +96,7 @@
             <option value="s4">Camping Tips</option>
         </select>
         <button type="submit">type="submit"</button>
-        <button type="button" onclick="alert(pass.value)">type="button"</button>
+        <button type="button" onclick="alert(pass.value)">type="button" show me pass</button>
     
     </form>
 
@@ -110,11 +110,13 @@
     
     
     <form action="app.php" method="GET">
-        <input type="text" name="login" value="" placeholder="Please input your login" autofocus="autofocus" autocomplete="off">
-        <input type="password" name="pass" id="pass" required>
+        <input type="text" name="login" value="" placeholder="Please input your login" autofocus="autofocus" autocomplete="off" required>
+        <input type="password" name="pass" id="pass" placeholder="Please input your password" autofocus="autofocus" autocomplete="off" required>
         <input type="number" name="number">
         <input type="submit" value="Click me">
-        <p>pattern тут поюзать</p>
+        <input type="text" id="empID" name="EmployeeID" required pattern="[A-Z]{2}[0-
+9]{4}"
+title="Employee ID is two capital letters followed by four digits">
     </form>
 
     autofocus="autofocus" - фокус на форму чтоб ввести
