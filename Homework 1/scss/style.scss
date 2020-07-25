@@ -31,24 +31,32 @@
     }
 
     #big-content {
-        width: 100%;
         display: grid;
-        grid-template-columns: 25% 50% 25%;
+        grid-template-columns: 1fr 2fr 1fr; /* fractions аналог 25% 50% 25% */
         grid-auto-rows: 600px;
 
         #sidebar {
             background: #5992d7;
             padding: 15px;
+            display: flex;
+            flex-flow: column wrap;
         }
 
         #content {
             background: #96b4da;
             padding: 15px;
+            display: flex;
+            flex-flow: column wrap;
         }
 
         aside {
             background: #5992d7;
             padding: 15px;
+
+            .events {
+                display: flex;
+                flex-flow: column wrap;
+            }
         }
     }
 
@@ -63,8 +71,12 @@
 
 }
 
-@media screen and (max-width: 800px)  { 
-    
+@media screen and (max-width: 960px)  { 
+    .container #big-content {
+        display: flow-root;
+        grid-template-columns: none;
+        
 }
 
+}
 
