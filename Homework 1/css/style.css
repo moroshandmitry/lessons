@@ -65,7 +65,7 @@
 
 @media screen and (max-width: 960px) {
   .container #big-content {
-    display: flow-root;
+    display: grid;
     grid-template-columns: none;
   }
 }
