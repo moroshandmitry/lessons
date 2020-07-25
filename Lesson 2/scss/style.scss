@@ -11,9 +11,41 @@ table, td, th {
     border: 1px solid grey;
 }
 
-input, select, button, textarea {
+select, textarea {
     display: flex;
     flex-direction: column;
     padding: 5px;
     margin: 5px;
 }
+
+
+/* Красивая форма */
+form {
+    background: #fff;
+    width: 300px;
+    margin: 0 auto;
+    padding: 30px 50px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    text-align: center;
+    font-variant: small-caps;
+}
+
+.form-control {
+  width: 100%;
+  padding: 5px;
+}
+
+button {
+  width: 100%;
+  background: #bc8e5c;
+  padding: 10px;
+  color: white;
+}
+
+.remember {
+  text-align: right;
+}
+/* Красивая форма */
