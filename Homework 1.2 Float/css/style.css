@@ -1,10 +1,41 @@
 * {
   padding: 0;
   margin: 0;
-  color: #e3faff;
+  color: #000;
 }
 
-h1 {
-  margin: 0;
-  padding: 0;
+.container {
+  margin: 0 auto;
+  max-width: 1170px;
+}
+.container .hero-header .header {
+  background: red;
+  min-height: 30px;
+  padding: 15px;
+}
+.container .hero-header .nav-bar {
+  background: green;
+  min-height: 30px;
+  padding: 15px;
+}
+.container .big-content .sidebar {
+  background: #c9baba;
+  width: 285px;
+  height: 600px;
+  float: left;
+}
+.container .big-content .content {
+  float: left;
+  background: #362cc7;
+  width: 600px;
+  height: 600px;
+}
+.container .big-content .aside {
+  float: left;
+  background: #0c084b;
+  width: 285px;
+  height: 600px;
+}
+.container .footer {
+  float: right;
 }

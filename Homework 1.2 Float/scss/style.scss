@@ -1,12 +1,55 @@
-$sideAside: #5992d7;
-
 * {
     padding: 0;
     margin: 0;
-    color: #e3faff;
+    color: #000;
 }
 
-h1 {
-    margin: 0;
-    padding: 0;
+.container {
+    margin: 0 auto;
+    max-width: 1170px;
+    
+    .hero-header {
+
+        .header {
+            background: red;
+            min-height: 30px;
+            padding: 15px;
+        }
+
+        .nav-bar {
+            background: green;
+            min-height: 30px;
+            padding: 15px;
+        }
+    }
+
+    .big-content {
+
+        .sidebar {
+            background: rgb(201, 186, 186);
+            width: 285px;
+            height: 600px;
+            float: left;
+        }
+
+        .content {
+            float: left;
+            background: rgb(54, 44, 199);
+            width: 600px;
+            height: 600px;
+        }
+
+        .aside {
+            float: left;
+            background: rgb(12, 8, 75);
+            width: 285px;
+            height: 600px;
+        }
+    }
+
+    .footer {
+        float: right;
+        
+    }
+
 }
