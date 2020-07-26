@@ -1,7 +1,17 @@
+$sideAside: #5992d7;
+
 * {
     padding: 0;
     margin: 0;
-    color: #000;
+    color: #fff;
+}
+
+a:hover {
+    color: red;
+}
+
+a:focus {
+    color: green;
 }
 
 .container {
@@ -11,45 +21,93 @@
     .hero-header {
 
         .header {
-            background: red;
+            background: #b1d0b0;
             min-height: 30px;
             padding: 15px;
         }
 
         .nav-bar {
-            background: green;
+            background: #68be65;
             min-height: 30px;
             padding: 15px;
         }
     }
 
-    .big-content {
+    .big-content { 
 
         .sidebar {
-            background: rgb(201, 186, 186);
-            width: 285px;
+            background: $sideAside;
+            width: 300px;
             height: 600px;
             float: left;
+            
+            .sidebar-content {
+                padding: 15px;
+            }
+            
+            a {
+                display: list-item;
+                margin-top: 10px;
+                list-style: none;
+            }
         }
 
         .content {
             float: left;
-            background: rgb(54, 44, 199);
-            width: 600px;
+            background: #96b4da;
+            width: 570px;
             height: 600px;
+            
+            .story-content {
+                padding: 15px;
+            }
+
+            .story {
+                display: list-item;
+                margin-top: 10px;
+                list-style: none;
+            }
         }
 
         .aside {
             float: left;
-            background: rgb(12, 8, 75);
-            width: 285px;
+            background: $sideAside;
+            width: 300px;
             height: 600px;
+
+            .events {
+                padding: 15px;
+            }
+
+            .events a {
+                display: list-item;
+                margin-top: 10px;
+                list-style: none;
+            }
         }
     }
 
     .footer {
         float: right;
+        background: #b1d0b0;
+        min-height: 30px;
+        padding: 15px;
         
     }
 
+}
+
+@media screen and (max-width: 1187px) { 
+    .container .big-content .sidebar, .content {
+        width: 50% !important;
+    }
+    .container .big-content .aside {
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 960px) { 
+    .container .big-content .sidebar, .content, .aside {
+        width: 100% !important;
+    }
 }
