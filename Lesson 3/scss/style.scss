@@ -48,3 +48,19 @@ p, h1 {
 .slogan {
   border: 5px dotted yellow;
 }
+
+p:hover {
+  background: red;
+}
+
+a:visited {
+  color: yellowgreen;
+}
+
+a:hover {
+  color: red;
+}
+
+a:active {
+  color: green;
+}
