@@ -1,0 +1,19 @@
+div {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    border: 1px solid gray;
+    background-color: yellowgreen;
+    box-sizing: border-box; /* border, padding - включён в размер контента 
+                               без этого будет 102px из за border сверху снизу
+                               по 1px + слева справа*/
+
+    &:hover {
+            background-color: blueviolet;
+    }
+
+    &::after {
+        content: " - Remember this";
+    }
+}
+
