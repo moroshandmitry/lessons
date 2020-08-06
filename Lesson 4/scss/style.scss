@@ -1,19 +1,47 @@
-div {
-    width: 100px;
-    height: 100px;
-    margin: 5px;
-    border: 1px solid gray;
-    background-color: yellowgreen;
-    box-sizing: border-box; /* border, padding - включён в размер контента 
-                               без этого будет 102px из за border сверху снизу
-                               по 1px + слева справа*/
+.container {
+    width: 1170px;
+    margin: 0 auto;
 
-    &:hover {
-            background-color: blueviolet;
+    .one {
+        width: 100px;
+        height: 100px;
+        margin: 5px;
+        border-width: 30px 30px 30px 30px;
+        border-color: green red yellow violet;
+        border-style: solid;
+        border-radius: 50%;
+        background-color: yellowgreen;
+        color: white;
+        text-align: center;
+        /* box-sizing: border-box;  border, padding - включён в размер контента без этого будет 100px + border */
+
+        &:hover {
+                background-color: blueviolet;
+        }
+
+        &::after {
+            content: " - Remember this";
+        }
+
+        &:hover:first-child {
+            background-color: peachpuff;
+        }
+
+        &:hover:nth-child(3) {
+            background-color: brown;
+        }
     }
 
-    &::after {
-        content: " - Remember this";
+    div.two {
+        display: inline-block;
+        margin: 5px;
+        width: 250px;
+        height: 250px;
+        border: 5px solid red;
+        background: palegreen;
+        box-sizing: border-box; /* border, padding - включён в размер контента 100 на 100 */
+        overflow-y: scroll; /* скрывает контент в блок */
+        overflow-x: hidden; /* скрывает контент в блок */
+        z-index: auto; /* эфект наложения блока 1 на другой > для position: absolute и т.д. */
     }
 }
-
