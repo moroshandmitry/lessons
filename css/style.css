@@ -1,48 +1,32 @@
 body {
-    background: linear-gradient(white, #D3D8E8);
-
+  background: linear-gradient(white, #b6c2e7);
 }
 
-ul {
-    list-style: none;
-    max-height: 750px;
-    overflow: auto;
-    cursor: pointer;
-    padding: 0;
+.container {
+  width: 1170px;
+  margin: 0 auto;
 }
-
-li:hover {
-    background: #fff;
+.container ul {
+  display: inline-block;
+  list-style: none;
+  overflow: auto;
+  cursor: pointer;
 }
-
-a {
-    text-decoration: none;
-    font-family: Arial, sans-serif;
-    font-size: 24px;
-    color: black;
-
+.container a {
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  color: black;
 }
-
-a:hover {
-    text-decoration: none;
-    color: #3b5998;
-
+.container .lessons, .container .homeworks {
+  width: 500px;
 }
-
-.lessons {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    max-width: 720px;
-    min-width: 320px;
-}
-
-.lesson {
-    background: #d2d9e8;
-    border: 5px solid #4267b2;
-    border-radius: 20px;
-    text-align: center;
-    padding: 7px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+.container .lesson, .container .homework {
+  background: #d2d9e8;
+  border: 5px solid #4267b2;
+  border-radius: 20px;
+  text-align: center;
+  padding: 7px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }

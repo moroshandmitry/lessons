@@ -1,0 +1,40 @@
+body {
+    background: linear-gradient(rgb(255, 255, 255), #b6c2e7);
+}
+
+.container {
+    width: 1170px;
+    margin: 0 auto;
+
+    ul {
+        display: inline-block;
+        list-style: none;
+        overflow: auto;
+        cursor: pointer;
+    }
+
+    a {
+        text-decoration: none;
+        font-family: Arial, sans-serif;
+        font-size: 20px;
+        color: black;
+    }
+
+    .lessons, .homeworks {
+        width: 500px;
+    }
+
+    .lesson, .homework {
+        background: #d2d9e8;
+        border: 5px solid #4267b2;
+        border-radius: 20px;
+        text-align: center;
+        padding: 7px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+}
+
+
+
