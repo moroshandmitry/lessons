@@ -1,5 +1,6 @@
 body {
     background: linear-gradient(rgb(255, 255, 255), #b6c2e7);
+    height: 100%;
 }
 
 .container {
@@ -22,7 +23,6 @@ body {
 
     .lessons, .homeworks {
         width: 500px;
-        height: 100%;
     }
 
     .lesson, .homework {
