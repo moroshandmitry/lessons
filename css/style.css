@@ -20,7 +20,7 @@ body {
 }
 .container .lessons, .container .homeworks {
   width: 500px;
-  height: 730px;
+  height: 100%;
 }
 .container .lesson, .container .homework {
   background: #d2d9e8;
