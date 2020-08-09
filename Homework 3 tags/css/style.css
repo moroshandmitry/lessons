@@ -1,0 +1,70 @@
+.container {
+  width: 1170px;
+  margin: 0 auto;
+}
+.container ul > li {
+  list-style: disc;
+}
+.container .my-table {
+  border-collapse: collapse;
+  border: 2px solid black;
+}
+.container .my-table thead {
+  border: 2px solid black;
+}
+.container .my-table thead tr, .container .my-table thead td {
+  border: 2px solid black;
+}
+.container .my-table thead .table-text {
+  font-weight: bold;
+  text-align: center;
+}
+.container .my-table tr, .container .my-table td {
+  border: 1px solid grey;
+  padding: 5px 10px;
+}
+.container .form-one {
+  box-sizing: border-box;
+}
+.container .form-one .input-fullwindow {
+  width: -webkit-fill-available;
+}
+.container .form-one table {
+  border: 1px solid grey;
+}
+.container .form-one table tr, .container .form-one table td {
+  border: 1px solid grey;
+}
+.container .form-one thead {
+  background: #ccccff;
+  text-align: center;
+}
+.container .form-two {
+  display: flex;
+  flex-direction: column;
+  width: 598px;
+  height: 432px;
+  background: #ffff99;
+}
+.container .form-two .form-text {
+  font-size: 1.1em;
+  font-weight: bold;
+  text-align: center;
+}
+.container .form-two .form-text .form-text--parent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 28px;
+  background-color: #ffcc00;
+}
+.container .form-two .form-fields {
+  padding-left: 30px;
+}
+.container .form-two .chose-answer {
+  display: inline-flex;
+}
+.container .form-two .chose-answer .radio-label {
+  display: flex;
+  flex-direction: column;
+}

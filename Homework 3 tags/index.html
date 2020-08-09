@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Html теги P</title>
-   <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 
 <div class="container">
-<h1>Ключевые слова</h1>
+<h2>Ключевые слова</h2>
 
 <ol type="I">
 
@@ -43,17 +44,21 @@
 
 </ol>
 
-<table>
-    <tr class="table-text">
-        <td colspan="2" rowspan="2">Browser</td> <!-- colspan="2" занимает 2 ячейки -->
-        <td colspan="2">Visitors</td>
-        
-    </tr>
-    <tr class="table-text">
-        <td>Number</td>
-        <td>Percentage</td>
-        
-    </tr>
+<br />
+
+<table class="my-table">
+    <thead class="my-thead">
+        <tr class="table-text">
+            <td colspan="2" rowspan="2">Browser</td> <!-- colspan="2" занимает 2 ячейки -->
+            <td colspan="2">Visitors</td>
+            
+        </tr>
+        <tr class="table-text">
+            <td>Number</td>
+            <td>Percentage</td>
+            
+        </tr>
+    </thead>
     <tr>
         <td colspan="2">Mozila Firefox</td>
         <td>163</td>
@@ -72,6 +77,122 @@
 
 </table>
 
+<br />
+
+<form class="form-one">
+    <table>
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Value</td>
+            </tr>
+        </thead>
+            <tr>
+                <td>Name</td>
+                <td><input class="input-fullwindow" type="text" name="Name"></td>
+            </tr>
+            <tr>
+                <td>Sex</td>
+                <td>
+                    <input type="radio" name="radio"><label> Male</label><br />
+                    <input type="radio" checked="checked" name="radio"><label> Female</label><br />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Eye color
+                </td>
+                <td>
+                    <select name="select">
+                        <option value="s1">green</option>
+                        <option value="s2">Red</option>
+                        <option value="s3">blue</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Check all that appy
+                </td>
+                <td>
+                    <input type="checkbox" name="checkbox"><label> Over 6 feet tall</label><br />
+                    <input type="checkbox" name="checkbox" name="radio"><label> Over 200 pounds</label><br />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    Describe your athletic ability:
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <textarea name="" id="" cols="39" rows="5"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <center><button class="btn-form" type="submit">Enter my information</button></center>
+                </td>
+            </tr>
+    </table>
+</form>
+
+<br />
+
+<form class="form-two">
+
+<div class="form-text">
+    <div class="form-text--parent">The World of Fruit</div>
+    <div>fruit Survey</div>
+</div>
+
+<div class="form-fields">
+    <div>
+        <label for="name">Name: <input type="text" id="name" name="name" required autocomplete="off"></label>
+    </div>
+    <div>
+        <label for="adress">Adress: </label><input type="text" id="adress" name="adress" required autocomplete="off">
+    </div>
+    <div>
+        <label for="email">Email: </label><input type="email" id="email" name="email"
+    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" autocomplete="off">
+    </div>
+
+
+    <div class="chose-answer">    
+        <div>
+            <label>How many piecer of fruit do you eat per day?</label>
+        </div>
+        <div class="radio-label">
+            <label><input type="radio" name="radio"> 0</label>
+            <label><input type="radio" name="radio"> 1</label>
+            <label><input type="radio" name="radio"> 2</label>
+            <label><input type="radio" name="radio"> More then 2</label>
+        </div>
+    </div>
+
+</div>
+
+<p>
+    <select size="4">
+        <option value="Apple">Apple</option>
+        <option value="Banana">Banana</option>
+        <option value="Plum">Plum</option>
+        <option value="Pomegranate">Pomegranate</option>
+        <option value="Сherry">Сherry</option>
+        <option value="Pineapple">Pineapple</option>
+        <option value="Strawberry">Strawberry</option>
+        <option value="Grapes">Grapes</option>
+   </select>
+</p>
+
+<label>Would you like a brochure <input type="checkbox" name="checkbox"></label>
+
+
+
+<button type="submit">Submit</button>
+    
+</form>
     
 
 </div>
