@@ -40,21 +40,29 @@
   text-align: center;
 }
 .container .form-two {
-  display: flex;
-  flex-direction: column;
   width: 598px;
   height: 432px;
   background: #ffff99;
 }
-.container .form-two .form-text {
+.container .form-two .form-text--parent {
   font-size: 1.1em;
   font-weight: bold;
   text-align: center;
-}
-.container .form-two .form-text .form-text--parent {
+  height: 28px;
+  background-color: #ffcc00;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 28px;
-  background-color: #ffcc00;
+  margin: 0;
+}
+.container .form-two .form-text--child {
+  font-size: 1.1em;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 0 1em;
+}
+.container .form-two .form-field {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }

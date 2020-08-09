@@ -141,36 +141,48 @@
 
 <form class="form-two">
 
-<div class="form-text">
-    <div class="form-text--parent">The World of Fruit</div>
-    <div>fruit Survey</div>
+    <p class="form-text--parent">The World of Fruit</p>
+    <p class="form-text--child">fruit Survey</p>
+
+<div class="form-field">
+    <label for="">Name: </label><input type="text" id="name" name="name" required autocomplete="off">
+</div>
+<div class="form-field">
+    <label for="">Adress: </label></label><input type="text" id="adress" name="adress" required autocomplete="off">
+</div>
+<div class="form-field">
+    <label for="">Email: </label></label><input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" autocomplete="off">
 </div>
 
-        Name: <input type="text" id="name" name="name" required autocomplete="off">
-        Adress: </label><input type="text" id="adress" name="adress" required autocomplete="off">
-        Email: </label><input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" autocomplete="off">
-
-        <label>How many piecer of fruit do you eat per day?</label>
-        <input type="radio" value="zero"> 0
-        <input type="radio" value="one"> 1
-        <input type="radio" value="two"> 2
-        <input type="radio" value="more than 2"> More than 2
-
-        <select size="4" multiple>
-            <option value="Apple">Apple</option>
-            <option value="Banana">Banana</option>
-            <option value="Plum">Plum</option>
-            <option value="Pomegranate">Pomegranate</option>
-            <option value="Сherry">Сherry</option>
-            <option value="Pineapple">Pineapple</option>
-            <option value="Strawberry">Strawberry</option>
-            <option value="Grapes">Grapes</option>
-        </select>
-
-        Would you like a brochure <input type="checkbox" name="checkbox">
-
-        <button type="submit">Submit</button>
-    
+<div class="form-field">
+    <label>How many piecer of fruit do you eat per day?</label>
+    <input type="radio" name="radio" value="zero"> 0
+    <input type="radio" name="radio" value="one"> 1
+    <input type="radio" name="radio" value="two"> 2
+    <input type="radio" name="radio" value="more than 2"> More than 2
+</div>
+             
+<div class="form-field">
+    <label>My favourite fruit</label>
+    <select size="4" multiple>
+        <option value="Apple">Apple</option>
+        <option value="Banana">Banana</option>
+        <option value="Plum">Plum</option>
+        <option value="Pomegranate">Pomegranate</option>
+        <option value="Сherry">Сherry</option>
+        <option value="Pineapple">Pineapple</option>
+        <option value="Strawberry">Strawberry</option>
+        <option value="Grapes">Grapes</option>
+    </select>
+</div>
+        
+<div class="form-field">
+    <label for="">Would you like a brochure </label><input type="checkbox" name="checkbox">
+</div>
+        
+<div class="form-field">
+    <button type="submit">Submit</button>
+</div> 
 </form>
     
 
