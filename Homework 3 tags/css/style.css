@@ -58,13 +58,3 @@
   height: 28px;
   background-color: #ffcc00;
 }
-.container .form-two .form-fields {
-  padding-left: 30px;
-}
-.container .form-two .chose-answer {
-  display: inline-flex;
-}
-.container .form-two .chose-answer .radio-label {
-  display: flex;
-  flex-direction: column;
-}
