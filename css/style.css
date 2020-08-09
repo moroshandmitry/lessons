@@ -4,7 +4,7 @@ body {
 }
 
 .container {
-  width: 1170px;
+  max-width: 1170px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -31,9 +31,9 @@ body {
 .container .lessons, .container .homeworks {
   display: flex;
   flex-direction: column;
-  min-width: 500px;
+  width: 45%;
 }
-.container .lesson, .container .homework {
+.container .forli {
   background: #d2d9e8;
   border: 5px solid #4267b2;
   border-radius: 20px;
@@ -43,8 +43,8 @@ body {
   margin-bottom: 20px;
 }
 
-@media screen and (max-width: 1187px) {
+@media screen and (max-width: 900px) {
   ul {
-    width: 97% !important;
+    width: 100% !important;
   }
 }
