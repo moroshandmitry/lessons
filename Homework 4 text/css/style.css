@@ -1,0 +1,49 @@
+.container {
+  width: 1170px;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+.container .text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5em;
+  font-weight: 500;
+  line-height: 1.4em;
+  letter-spacing: 0.05em;
+  text-align: justify;
+  color: green;
+}
+.container a {
+  text-decoration: none;
+}
+.container .icons {
+  display: flex;
+  justify-content: flex-end;
+}
+.container .icons .fa-facebook-square {
+  font-size: 3.5em;
+  color: grey;
+}
+.container .icons .fa-facebook-square:hover {
+  color: #3b5998;
+}
+.container .icons .fa-youtube {
+  font-size: 3.5em;
+  color: grey;
+}
+.container .icons .fa-youtube:hover {
+  color: #ff011d;
+}
+.container .icons .fa-instagram {
+  font-size: 3.5em;
+  color: grey;
+}
+.container .icons .fa-instagram:hover {
+  color: #f87e2b;
+}
+.container .icons .fa-pinterest {
+  font-size: 3.5em;
+  color: grey;
+}
+.container .icons .fa-pinterest:hover {
+  color: #e81b22;
+}
