@@ -12,6 +12,10 @@ body {
         list-style: none;
         overflow: auto;
         cursor: pointer;
+
+        h2 {
+            text-align: center;
+        }
     }
 
     a {
