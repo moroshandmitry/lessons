@@ -41,7 +41,7 @@
 }
 .container .form-two {
   width: 598px;
-  height: 432px;
+  height: 535px;
   background: #ffff99;
 }
 .container .form-two .form-text--parent {
@@ -64,9 +64,19 @@
 .container .form-two .form-field {
   display: flex;
   justify-content: flex-start;
+  padding: 10px 0px;
+}
+.container .form-two .form-field ul {
+  padding: 0;
+}
+.container .form-two .form-field li {
+  list-style: none;
 }
 .container .form-two .form-field label {
-  width: 250px;
+  width: 180px;
   text-align: right;
-  padding-right: 15px;
+  padding: 5px;
+}
+.container .form-two .form-field button {
+  margin: 0 auto;
 }
