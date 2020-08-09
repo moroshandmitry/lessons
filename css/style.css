@@ -6,9 +6,12 @@ body {
 .container {
   width: 1170px;
   margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
 }
 .container ul {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
   list-style: none;
   overflow: auto;
   cursor: pointer;
@@ -17,13 +20,18 @@ body {
   text-align: center;
 }
 .container a {
+  display: flex;
+  justify-content: center;
   text-decoration: none;
   font-family: Arial, sans-serif;
   font-size: 20px;
   color: black;
+  width: 100%;
 }
 .container .lessons, .container .homeworks {
-  width: 500px;
+  display: flex;
+  flex-direction: column;
+  min-width: 500px;
 }
 .container .lesson, .container .homework {
   background: #d2d9e8;
@@ -33,4 +41,10 @@ body {
   padding: 7px;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1187px) {
+  ul {
+    width: 97% !important;
+  }
 }
