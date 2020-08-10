@@ -2,7 +2,7 @@
     width: 1170px;
     margin: 0 auto;
 
-    ul>li {
+    .keywords-list>li {
         list-style: disc;
     }
 
@@ -52,56 +52,49 @@
         }
     }
 
-    .form-two {
-        width: 598px;
-        height: 535px;
-        background: #ffff99;
+    .full-form {
+        width: 500px;
+        height: 530px;
+        background: #ffff9a;
         
-            .form-text--parent {
-                font-size: 1.1em;
-                font-weight: bold;
-                text-align: center;
-                height: 28px;
-                background-color: #ffcc00;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin: 0;
-            }
-            .form-text--child {
-                font-size: 1.1em;
-                font-weight: bold;
-                text-align: center;
-                margin: 0 0 1em;
-                
-            }
-        
-        .form-field {
+
+        h2 {
             display: flex;
-            justify-content: flex-start;
-            padding: 10px 0px;
-
-            ul {
-                padding: 0;
-            }
-
-            li {
-                list-style: none;
-            }
-
-            label {
-                width: 180px;
-                text-align: right;
-                padding: 5px;
-            }
-
-            button {
-                margin: 0 auto;
-            }
-
-        
+            justify-content: center;
+            align-items: center;
+            height: 33px;
+            background: #ffcb06;
         }
 
+        h3 {
+            text-align: center;
+        }
+
+        .blocks-form {
+            display: flex;
+            padding: 11px;
+
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+
+                span {
+                    margin-left: 5px;
+                }
+            }
+        }
         
+        label {
+            width: 167px;
+            text-align: right;
+        }
+        input, select {
+            margin-left: 10px;
+        }
+        
+        .btn {
+            margin-left: 170px;
+        }
     }
 }

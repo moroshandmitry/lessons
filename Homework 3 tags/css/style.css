@@ -2,7 +2,7 @@
   width: 1170px;
   margin: 0 auto;
 }
-.container ul > li {
+.container .keywords-list > li {
   list-style: disc;
 }
 .container .my-table {
@@ -39,44 +39,40 @@
   background: #ccccff;
   text-align: center;
 }
-.container .form-two {
-  width: 598px;
-  height: 535px;
-  background: #ffff99;
+.container .full-form {
+  width: 500px;
+  height: 530px;
+  background: #ffff9a;
 }
-.container .form-two .form-text--parent {
-  font-size: 1.1em;
-  font-weight: bold;
-  text-align: center;
-  height: 28px;
-  background-color: #ffcc00;
+.container .full-form h2 {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  height: 33px;
+  background: #ffcb06;
+}
+.container .full-form h3 {
+  text-align: center;
+}
+.container .full-form .blocks-form {
+  display: flex;
+  padding: 11px;
+}
+.container .full-form .blocks-form ul {
+  list-style: none;
+  padding: 0;
   margin: 0;
 }
-.container .form-two .form-text--child {
-  font-size: 1.1em;
-  font-weight: bold;
-  text-align: center;
-  margin: 0 0 1em;
+.container .full-form .blocks-form ul span {
+  margin-left: 5px;
 }
-.container .form-two .form-field {
-  display: flex;
-  justify-content: flex-start;
-  padding: 10px 0px;
-}
-.container .form-two .form-field ul {
-  padding: 0;
-}
-.container .form-two .form-field li {
-  list-style: none;
-}
-.container .form-two .form-field label {
-  width: 180px;
+.container .full-form label {
+  width: 167px;
   text-align: right;
-  padding: 5px;
 }
-.container .form-two .form-field button {
-  margin: 0 auto;
+.container .full-form input, .container .full-form select {
+  margin-left: 10px;
+}
+.container .full-form .btn {
+  margin-left: 170px;
 }
