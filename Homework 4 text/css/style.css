@@ -33,12 +33,15 @@
 .container .icons .fa-youtube:hover {
   color: #ff011d;
 }
-.container .icons .fa-instagram {
+.container .icons #insta {
   font-size: 3.5em;
   color: grey;
 }
-.container .icons .fa-instagram:hover {
-  color: #f87e2b;
+.container .icons #insta:hover {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .container .icons .fa-pinterest {
   font-size: 3.5em;
