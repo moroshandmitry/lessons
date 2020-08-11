@@ -1,0 +1,21 @@
+.wrapper {
+    width: 1170px;
+    margin: 0 auto;
+
+    div {
+        // background-color: rgba(155, 12, 13, 0.2);
+        // background: url(../img/cat.jpg);
+        // background-color: burlywood;
+        // background-repeat: no-repeat;
+        // background-position: right center;
+        // background-attachment: local;
+        // background-size: contain;
+        background: linear-gradient(45deg, red 50%, blue 80%);
+        // background: radial-gradient();
+        width: 1350px;
+        height: 1350px;
+        margin: 5px;
+        border: 1px solid grey;
+    }
+
+}
