@@ -4,8 +4,8 @@
 }
 .wrapper div {
   background: linear-gradient(45deg, red 50%, blue 80%);
-  width: 1350px;
-  height: 1350px;
+  width: 350px;
+  height: 350px;
   margin: 5px;
   border: 1px solid grey;
 }
