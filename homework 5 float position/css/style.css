@@ -12,21 +12,13 @@
   font-family: "Lato", sans-serif;
   font-size: 1.5em;
   text-transform: none;
-<<<<<<< HEAD
   content: "«Lorem ipsum, dolor sit amet consectetur adipisicing elit. ";
-=======
-  content: "\00abLorem ipsum, dolor sit amet consectetur adipisicing elit. ";
->>>>>>> 337042e5d88a7da537879830a4e8abeb103b0429
 }
 .container .text::after {
   font-family: "Lato", sans-serif;
   font-size: 1.5em;
   text-transform: none;
-<<<<<<< HEAD
   content: " Aliquam iusto rem consectetur iste voluptatem, corrupti ipsam quidem et debitis explicabo optio non nemo magni!»";
-=======
-  content: " Aliquam iusto rem consectetur iste voluptatem, corrupti ipsam quidem et debitis explicabo optio non nemo magni!\00bb";
->>>>>>> 337042e5d88a7da537879830a4e8abeb103b0429
 }
 .container .list-fruits > li {
   list-style: square;
