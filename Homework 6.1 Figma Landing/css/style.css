@@ -9,7 +9,6 @@ p {
 .container {
   width: 1440px;
   margin: 0 auto;
-  padding-top: 165px;
 }
 .container header h1 {
   font-family: Roboto;
