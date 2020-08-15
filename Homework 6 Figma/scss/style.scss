@@ -1,3 +1,14 @@
+//  Переменные
+$text-color: #6f7cb2;
+
+// Миксины
+@mixin fontRobotoUniversal {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+}
+
+// Убрать отступы для стилей
 h1,
 h2,
 h3,
@@ -6,18 +17,14 @@ p {
   padding: 0;
 }
 
-@mixin fontRobotoUniversal {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-}
-
+// Все стили
 .container {
   max-width: 1440px;
   margin: 0 auto;
-  padding-top: 165px;
 
   header {
+    padding-top: 140px;
+
     h1 {
       @include fontRobotoUniversal;
       font-size: 36px;
@@ -31,21 +38,24 @@ p {
       font-weight: normal;
       font-size: 16px;
       line-height: 26px;
-      color: #6f7cb2;
+      color: $text-color;
     }
   }
 
   main {
-    display: inline-flex;
+    display: flex;
     justify-content: space-between;
     margin-top: 50px;
 
     article {
+      display: flex;
+      flex-direction: column;
+
       h2 {
         @include fontRobotoUniversal;
         font-size: 36px;
         line-height: 48px;
-        color: #37447e;
+        color: $text-color;
         text-transform: uppercase;
       }
       h3 {
@@ -75,5 +85,38 @@ p {
         margin-top: 20px;
       }
     }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 600px;
+
+    header {
+      padding-top: 0px;
+    }
+
+    main {
+      margin-top: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    article {
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+  }
+}
+@media only screen and (max-width: 640px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .container {
+    width: 360px;
   }
 }
