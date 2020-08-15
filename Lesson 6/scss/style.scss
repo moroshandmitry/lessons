@@ -1,0 +1,34 @@
+:root {
+  --clr: darkblue;
+}
+
+div {
+  width: 100px;
+  height: 100px;
+  background: aqua;
+  margin: 10px;
+  display: inline-block;
+
+  img {
+    max-width: 100%;
+  }
+}
+p {
+  color: var(--clr);
+  font-size: 20px;
+}
+
+span {
+  background: yellow;
+}
+
+@media only screen and (max-width: 900px) and (min-width: 600px) {
+  div {
+    width: 50px;
+    height: 50px;
+    background: yellow;
+    margin: 10px;
+    font-size: 8px;
+    display: block;
+  }
+}
