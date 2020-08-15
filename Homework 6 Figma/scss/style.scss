@@ -1,0 +1,79 @@
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin fontRobotoUniversal {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.container {
+  width: 1440px;
+  height: 702px;
+  padding: 165px 140px;
+
+  header {
+    h1 {
+      @include fontRobotoUniversal;
+      font-size: 36px;
+      line-height: 48px;
+      color: #091133;
+      text-transform: capitalize;
+    }
+    p {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 26px;
+      color: #6f7cb2;
+    }
+  }
+
+  main {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+
+    article {
+      h2 {
+        @include fontRobotoUniversal;
+        font-size: 36px;
+        line-height: 48px;
+        color: #37447e;
+        text-transform: uppercase;
+      }
+      h3 {
+        @include fontRobotoUniversal;
+        font-size: 22px;
+        line-height: 32px;
+        color: #091133;
+        margin-top: 15px;
+      }
+
+      p {
+        margin-top: 10px;
+        width: 70%;
+      }
+
+      button {
+        @include fontRobotoUniversal;
+        font-size: 12px;
+        line-height: 18px;
+        text-align: center;
+        color: #ffffff;
+        width: 189px;
+        height: 26px;
+        background: #111b47;
+        border: none;
+        border-radius: 2px;
+        margin-top: 20px;
+      }
+    }
+  }
+}
