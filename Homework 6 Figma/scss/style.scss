@@ -14,7 +14,7 @@ p {
 
 .container {
   width: 1440px;
-  height: 702px;
+  height: 738px;
   padding: 165px 140px;
 
   header {
@@ -36,7 +36,7 @@ p {
   }
 
   main {
-    display: flex;
+    display: inline-flex;
     justify-content: space-between;
     margin-top: 50px;
 
