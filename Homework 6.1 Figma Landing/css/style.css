@@ -7,8 +7,11 @@ p {
 }
 
 .container {
-  width: 1440px;
+  max-width: 1440px;
   margin: 0 auto;
+}
+.container header {
+  padding-top: 140px;
 }
 .container header h1 {
   font-family: Roboto;
@@ -28,9 +31,13 @@ p {
   color: #6f7cb2;
 }
 .container main {
-  display: inline-flex;
+  display: flex;
   justify-content: space-between;
   margin-top: 50px;
+}
+.container main article {
+  display: flex;
+  flex-direction: column;
 }
 .container main article h2 {
   font-family: Roboto;
@@ -38,7 +45,7 @@ p {
   font-weight: 500;
   font-size: 36px;
   line-height: 48px;
-  color: #37447e;
+  color: #6f7cb2;
   text-transform: uppercase;
 }
 .container main article h3 {
@@ -68,4 +75,28 @@ p {
   border: none;
   border-radius: 2px;
   margin-top: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 600px;
+  }
+  .container header {
+    padding-top: 0px;
+  }
+  .container main {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .container article {
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .container {
+    width: 300px;
+  }
 }
