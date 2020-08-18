@@ -1,0 +1,33 @@
+@charset "UTF-8";
+.mybox {
+  column-count: 3;
+  column-gap: 50px;
+  column-rule: 1px solid red;
+}
+.mybox h1 {
+  column-span: all;
+}
+
+#container {
+  display: flex;
+  height: 300px;
+  border: 1px solid red;
+  background-color: lightgreen;
+  /* .box4 {
+    flex-basis: auto; // автосжимание
+  } */
+}
+#container .box {
+  width: 100px;
+  height: 100px;
+  flex-grow: 1;
+  flex: 1 1;
+  border: 1px solid gray;
+  margin: 5px;
+}
+#container .box2 {
+  flex-grow: 2;
+}
+#container .box3 {
+  flex-shrink: 2;
+}

@@ -1,0 +1,49 @@
+.mybox {
+  column-count: 3; // число текстовых колонок
+  // column-width: 200px; // ширина колонки
+  column-gap: 50px; // размер между колонками
+  column-rule: 1px solid red; // стиль линии разделителя как и border
+
+  h1 {
+    column-span: all; // на всю ширину колонки
+  }
+}
+
+#container {
+  display: flex;
+
+  // flex-direction: row; // направление column, row (reverse)
+  // flex-wrap: wrap; // wrap если контейнера не хватит перенесёт блоки // nowrap уместит и сожмёт блоки игнорируя ширину (reverse)
+
+  // flex-flow: row wrap; // для flex-direction и flex-wrap
+
+  // justify-content: left; // горизонтальная ось
+  // align-items: stretch; // поперечная, вертикальная ось
+
+  height: 300px;
+  border: 1px solid red;
+  background-color: lightgreen;
+
+  // align-content: space-between; // по горизонтали
+
+  .box {
+    width: 100px;
+    height: 100px;
+    flex-grow: 1;
+    flex: 1 1;
+    border: 1px solid gray;
+    margin: 5px;
+  }
+
+  .box2 {
+    flex-grow: 2; // растягивает колонки
+  }
+
+  .box3 {
+    flex-shrink: 2; // сжимает колоники
+  }
+
+  /* .box4 {
+    flex-basis: auto; // автосжимание
+  } */
+}
