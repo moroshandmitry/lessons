@@ -1,171 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Html теги P</title>
-    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Ключевые слова</h2>
 
-<div class="container">
-<h2>Ключевые слова</h2>
+      <ol type="I">
+        <li>
+          <b>A</b>
+          <ul class="keywords-list">
+            <li><a href="#">abstract</a></li>
+          </ul>
+        </li>
 
-<ol type="I">
-
-    <li>
-        <b>A</b>
-        <ul class="keywords-list">
-            <li><a href="#">abstract</a></li> 
-        </ul>
-    </li>
-
-    <li>
-        <b>B</b>
-        <ul class="keywords-list">
+        <li>
+          <b>B</b>
+          <ul class="keywords-list">
             <li><a href="#">boolean</a></li>
             <li><a href="#">break</a></li>
             <li><a href="#">byte</a></li>
-        </ul>
-    </li>
+          </ul>
+        </li>
 
-    <li>
-        <b>C</b>
-        <ul class="keywords-list">
+        <li>
+          <b>C</b>
+          <ul class="keywords-list">
             <li><a href="#">case</a></li>
             <li><a href="#">catch</a></li>
             <li><a href="#">char</a></li>
             <li><a href="#">class</a></li>
             <li><a href="#">const</a></li>
             <li><a href="#">continue</a></li>
-        </ul>
-    </li>
+          </ul>
+        </li>
+      </ol>
 
-</ol>
+      <br />
 
-<br />
-
-<table class="my-table">
-    <thead class="my-thead">
-        <tr class="table-text">
-            <td colspan="2" rowspan="2">Browser</td> <!-- colspan="2" занимает 2 ячейки -->
+      <table class="my-table">
+        <thead class="my-thead">
+          <tr class="table-text">
+            <td colspan="2" rowspan="2">Browser</td>
+            <!-- colspan="2" занимает 2 ячейки -->
             <td colspan="2">Visitors</td>
-            
-        </tr>
-        <tr class="table-text">
+          </tr>
+          <tr class="table-text">
             <td>Number</td>
             <td>Percentage</td>
-            
-        </tr>
-    </thead>
-    <tr>
-        <td colspan="2">Mozila Firefox</td>
-        <td>163</td>
-        <td>59%</td>
-    </tr>
-    <tr>
-        <td colspan="2">Google Chrome</td>
-        <td>78</td>
-        <td>28%</td>
-    </tr>
-    <tr>
-        <td colspan="2">Safari</td>
-        <td>35</td>
-        <td>13%</td>
-    </tr>
-
-</table>
-
-<br />
-
-<form class="form-one">
-    <table>
-        <thead>
-            <tr>
-                <td>Name</td>
-                <td>Value</td>
-            </tr>
+          </tr>
         </thead>
-            <tr>
-                <td>Name</td>
-                <td><input class="input-fullwindow" type="text" name="Name"></td>
-            </tr>
-            <tr>
-                <td>Sex</td>
-                <td>
-                    <input type="radio" name="radio"><label> Male</label><br />
-                    <input type="radio" checked="checked" name="radio"><label> Female</label><br />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Eye color
-                </td>
-                <td>
-                    <select name="select">
-                        <option value="s1">green</option>
-                        <option value="s2">Red</option>
-                        <option value="s3">blue</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Check all that appy
-                </td>
-                <td>
-                    <input type="checkbox" name="checkbox"><label> Over 6 feet tall</label><br />
-                    <input type="checkbox" name="checkbox" name="radio"><label> Over 200 pounds</label><br />
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    Describe your athletic ability:
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <textarea name="" id="" cols="39" rows="5"></textarea>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <center><button class="btn-form" type="submit">Enter my information</button></center>
-                </td>
-            </tr>
-    </table>
-</form>
+        <tr>
+          <td colspan="2">Mozila Firefox</td>
+          <td>163</td>
+          <td>59%</td>
+        </tr>
+        <tr>
+          <td colspan="2">Google Chrome</td>
+          <td>78</td>
+          <td>28%</td>
+        </tr>
+        <tr>
+          <td colspan="2">Safari</td>
+          <td>35</td>
+          <td>13%</td>
+        </tr>
+      </table>
 
-<br />
+      <br />
 
-<form action="" method="get" class="full-form">
-    <h2>The World of Fruit</h2>
-    <h3>Fruit Survey</h3>
+      <form class="form-one">
+        <table>
+          <thead>
+            <tr>
+              <td>Name</td>
+              <td>Value</td>
+            </tr>
+          </thead>
+          <tr>
+            <td>Name</td>
+            <td><input class="input-fullwindow" type="text" name="Name" /></td>
+          </tr>
+          <tr>
+            <td>Sex</td>
+            <td>
+              <input type="radio" name="radio" /><label> Male</label><br />
+              <input type="radio" checked="checked" name="radio" /><label>
+                Female</label
+              ><br />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Eye color
+            </td>
+            <td>
+              <select name="select">
+                <option value="s1">green</option>
+                <option value="s2">Red</option>
+                <option value="s3">blue</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Check all that appy
+            </td>
+            <td>
+              <input type="checkbox" name="checkbox" /><label>
+                Over 6 feet tall</label
+              ><br />
+              <input type="checkbox" name="checkbox" /><label>
+                Over 200 pounds</label
+              ><br />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              Describe your athletic ability:
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <textarea name="" id="" cols="39" rows="5"></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <button class="btn-form" type="submit">
+                Enter my information
+              </button>
+            </td>
+          </tr>
+        </table>
+      </form>
 
-    <div class="blocks-form">
-        <label for="">Name</label><input type="text" id="name" name="name" required="" autocomplete="off">
-    </div>
-    <div class="blocks-form">
-        <label for="">Address</label><input type="text" id="adress" name="adress" required="" autocomplete="off">
-    </div>
-    <div class="blocks-form">
-        <label for="">Email</label><input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" autocomplete="off">
-    </div>
-        
-    <div class="blocks-form">
-        <label for="">How many pieces of fruit do you eat per day </label>
-            <ul>
-                <li><input type="radio" name="radio" id=""><span>0</span></li>
-                <li><input type="radio" name="radio" id=""><span>1</span></li>
-                <li><input type="radio" name="radio" id=""><span>2</span></li>
-                <li><input type="radio" name="radio" id=""><span>More than 2</span></li>
-            </ul>
-    </div>
+      <br />
 
-    <div class="blocks-form">
-        <label for="">My favourite fruit </label>
-        <select size="4"  name="" id="">
+      <form action="" method="get" class="full-form">
+        <h2>The World of Fruit</h2>
+        <h3>Fruit Survey</h3>
+
+        <div class="blocks-form">
+          <label for="">Name</label
+          ><input
+            type="text"
+            id="name"
+            name="name"
+            required
+            autocomplete="off"
+          />
+        </div>
+        <div class="blocks-form">
+          <label for="">Address</label
+          ><input
+            type="text"
+            id="adress"
+            name="adress"
+            required
+            autocomplete="off"
+          />
+        </div>
+        <div class="blocks-form">
+          <label for="">Email</label
+          ><input
+            type="email"
+            id="email"
+            name="email"
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+            autocomplete="off"
+          />
+        </div>
+
+        <div class="blocks-form">
+          <label for="">How many pieces of fruit do you eat per day </label>
+          <ul>
+            <li><input type="radio" name="radio" id="" /><span>0</span></li>
+            <li><input type="radio" name="radio" id="" /><span>1</span></li>
+            <li><input type="radio" name="radio" id="" /><span>2</span></li>
+            <li>
+              <input type="radio" name="radio" id="" /><span>More than 2</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="blocks-form">
+          <label for="">My favourite fruit </label>
+          <select size="4" name="" id="">
             <option value="Apple">Apple</option>
             <option value="Banana">Banana</option>
             <option value="Plum">Plum</option>
@@ -174,20 +203,18 @@
             <option value="Banana">Banana</option>
             <option value="Plum">Plum</option>
             <option value="Pomegranate">Pomegranate</option>
-        </select>
+          </select>
+        </div>
+
+        <div class="blocks-form">
+          <label for="">Would you like a brochure? </label
+          ><input type="checkbox" name="checkbox" id="" />
+        </div>
+
+        <div class="blocks-form btn">
+          <input type="button" value="Submit" />
+        </div>
+      </form>
     </div>
-
-    <div class="blocks-form">
-        <label for="">Would you like a brochure? </label><input type="checkbox" name="checkbox" id="">
-    </div>
-
-    <div class="blocks-form btn">
-        <input type="button" value="Submit">
-    </div>
-</form>
-    
-
-</div>
-
-</body>
+  </body>
 </html>
