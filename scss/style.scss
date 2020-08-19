@@ -7,13 +7,11 @@ body {
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  height: 100%;
 
   .lessons,
   .homeworks {
     display: flex;
     flex-direction: column;
-    height: 948px;
     width: 45%;
 
     h2 {
@@ -25,6 +23,7 @@ body {
       flex-direction: column;
       margin: 0;
       padding: 0;
+      height: 948px;
       list-style: none;
       overflow-y: scroll;
       cursor: pointer;
