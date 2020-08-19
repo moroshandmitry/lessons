@@ -1,61 +1,58 @@
 body {
-    background: linear-gradient(rgb(255, 255, 255), #b6c2e7);
-    height: 100%;
+  background: linear-gradient(rgb(255, 255, 255), #b6c2e7);
+  height: 100%;
 }
 
 .container {
-    max-width: 1170px;
-    margin: 0 auto;
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+
+  ul {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: auto;
+    cursor: pointer;
 
-    ul {
-        display: flex;
-        flex-direction: column;
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        overflow: auto;
-        cursor: pointer;
-
-        h2 {
-            text-align: center;
-        }
+    p {
+      text-align: center;
     }
+  }
 
-    a { 
-        display: flex;
-        justify-content: center;
-        text-decoration: none;
-        font-family: Arial, sans-serif;
-        font-size: 20px;
-        color: black;
-        width: 100%;
-    }
+  a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    color: black;
+    width: 100%;
+  }
 
-    .lessons, .homeworks {
-        display: flex;
-        flex-direction: column;
-        width: 45%;
-    }
+  .lessons,
+  .homeworks {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+  }
 
-    .forli {
-        background: #d2d9e8;
-        border: 5px solid #4267b2;
-        border-radius: 20px;
-        text-align: center;
-        padding: 7px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-
+  .forli {
+    background: #d2d9e8;
+    border: 5px solid #4267b2;
+    border-radius: 20px;
+    text-align: center;
+    padding: 7px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 }
 
-
-@media screen and (max-width: 900px) { 
-    ul {
-        width: 100% !important;
-    }
+@media screen and (max-width: 900px) {
+  ul {
+    width: 100% !important;
+  }
 }
-
-
