@@ -9,6 +9,10 @@ body {
   display: flex;
   flex-wrap: wrap;
 
+  h2 {
+    text-align: center;
+  }
+
   ul {
     display: flex;
     flex-direction: column;
@@ -17,10 +21,6 @@ body {
     list-style: none;
     overflow: auto;
     cursor: pointer;
-
-    p {
-      text-align: center;
-    }
   }
 
   a {
