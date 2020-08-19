@@ -7,11 +7,13 @@ body {
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
+  height: 100%;
 }
 .container .lessons,
 .container .homeworks {
   display: flex;
   flex-direction: column;
+  height: 820px;
   width: 45%;
 }
 .container .lessons h2,
@@ -24,7 +26,6 @@ body {
   flex-direction: column;
   margin: 0;
   padding: 0;
-  height: 800px;
   list-style: none;
   overflow-y: scroll;
   cursor: pointer;
