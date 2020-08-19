@@ -23,8 +23,9 @@ body {
       flex-direction: column;
       margin: 0;
       padding: 0;
+      height: 800px;
       list-style: none;
-      overflow: auto;
+      overflow-y: scroll;
       cursor: pointer;
 
       li {
