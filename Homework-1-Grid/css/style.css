@@ -4,7 +4,6 @@
   margin: 0;
   color: #e3faff;
 }
-
 .container {
   margin: 0 auto;
   width: 100%;
@@ -31,7 +30,6 @@
 .container #big-content {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  /* fractions аналог 25% 50% 25% */
   grid-auto-rows: 600px;
 }
 .container #big-content #sidebar {
@@ -62,7 +60,6 @@
   align-items: center;
   padding-left: 15px;
 }
-
 @media screen and (max-width: 960px) {
   .container #big-content {
     display: grid;
