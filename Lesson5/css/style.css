@@ -1,11 +1,1 @@
-.wrapper {
-  width: 1170px;
-  margin: 0 auto;
-}
-.wrapper div {
-  background: linear-gradient(45deg, red 50%, blue 80%);
-  width: 350px;
-  height: 350px;
-  margin: 5px;
-  border: 1px solid grey;
-}
+.wrapper{width:1170px;margin:0 auto}.wrapper div{background:linear-gradient(45deg,red 50%,blue 80%);width:350px;height:350px;margin:5px;border:1px solid grey}
