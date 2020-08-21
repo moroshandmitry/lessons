@@ -13,7 +13,7 @@ body {
   .pdf-lessons {
     display: flex;
     flex-direction: column;
-    width: 32%;
+    width: 33%;
 
     h2 {
       text-align: center;
@@ -42,8 +42,8 @@ body {
           display: flex;
           justify-content: center;
           text-decoration: none;
-          font-family: Tahoma, sans-serif;
-          font-size: 12px;
+          //font-family: Tahoma, sans-serif;
+          font-size: 14px;
           color: black;
           width: 100%;
         }
