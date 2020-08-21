@@ -9,10 +9,11 @@ body {
   flex-wrap: wrap;
 
   .lessons,
-  .homeworks {
+  .homeworks,
+  .pdf-lessons {
     display: flex;
     flex-direction: column;
-    width: 45%;
+    width: 32%;
 
     h2 {
       text-align: center;
@@ -53,7 +54,8 @@ body {
 
 @media screen and (max-width: 900px) {
   .lessons,
-  .homeworks {
+  .homeworks,
+  .pdf-lessons {
     width: 100% !important;
   }
 }
