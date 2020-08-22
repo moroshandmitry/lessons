@@ -51,36 +51,66 @@
     display: flex;
     flex-wrap: wrap;
     margin-top: 30px;
+
+    .block-img {
+      height: 230px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        height: 200px;
+        clip-path: circle(100px at center);
+      }
+
+      .grayscale {
+        filter: grayscale(1);
+      }
+      .sepin {
+        filter: sepia(0.8);
+      }
+      .saturate {
+        filter: saturate(0.5);
+      }
+      .hue-rotate {
+        filter: hue-rotate(90deg);
+      }
+      .opacity {
+        filter: opacity(0.2);
+      }
+      .invert {
+        filter: invert(0.3);
+      }
+      .brightness {
+        filter: brightness(0.25);
+      }
+      .contrast {
+        filter: contrast(200%);
+      }
+      .contrast-brightness {
+        filter: contrast(200%) brightness(0.25);
+      }
+    }
   }
-  img {
-    width: 300px;
-    clip-path: circle(100px at center);
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 600px;
+
+    .img-filters {
+      flex-direction: column;
+    }
   }
-  .grayscale {
-    filter: grayscale(1);
+}
+@media only screen and (max-width: 640px) {
+  .container {
+    width: 480px;
   }
-  .sepin {
-    filter: sepia(0.8);
-  }
-  .saturate {
-    filter: saturate(0.5);
-  }
-  .hue-rotate {
-    filter: hue-rotate(90deg);
-  }
-  .opacity {
-    filter: opacity(0.2);
-  }
-  .invert {
-    filter: invert(0.3);
-  }
-  .brightness {
-    filter: brightness(0.25);
-  }
-  .contrast {
-    filter: contrast(200%);
-  }
-  .contrast-brightness {
-    filter: contrast(200%) brightness(0.25);
+}
+
+@media only screen and (max-width: 576px) {
+  .container {
+    width: 360px;
   }
 }
