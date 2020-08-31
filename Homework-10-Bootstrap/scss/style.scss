@@ -152,8 +152,12 @@ $textColorGrey: #787878;
     display: none;
   }
 
-  .wrapper .color-img-first:hover .pe-7s-look {
+  .color-img:hover .pe-7s-look {
     display: flex;
+  }
+
+  .color-img:hover {
+    background: #252525;
   }
 
   .color-img-first {
