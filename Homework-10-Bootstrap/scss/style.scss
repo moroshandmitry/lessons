@@ -149,7 +149,11 @@ $textColorGrey: #787878;
 
   // Chess block
   .pe-7s-look {
-    display: none !important;
+    display: none;
+  }
+
+  .wrapper .color-img-first:hover .pe-7s-look {
+    display: flex;
   }
 
   .color-img-first {
