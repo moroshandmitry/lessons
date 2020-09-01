@@ -1,13 +1,90 @@
-.box {
-  height: 200px;
-  border: 1px solid blueviolet;
-  background-color: rgb(178, 178, 224);
+// Variable
+$primary-color: darkred;
+$alternative-color: yellow;
+$another-color: white;
 
-  .item {
-    height: 100px;
+// Mixin
+@mixin position-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// function
+@function make-greener($value) {
+  @return $value;
+}
+
+// counter for (rule generator)
+@for $i from 1 to 12 {
+  .col-lg-#{$i} {
+    width: $i;
+  }
+}
+
+@for $i from 1 through 12 {
+  .col-lg-#{$i} {
+    width: precentage($i / 12);
+  }
+}
+
+// counter each
+@each $name in "save" "cancel" "help" {
+  .box-#{$name} {
+    background-image: url("../img/#{$name}.png");
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@each $name in "save" "cancel" "help" {
+  .box-#{$name} {
+    background-color: red;
+  }
+}
+
+// Nesting
+.container {
+  .content-center {
+    color: $primary-color;
+    background: $alternative-color;
+    @include position-center;
   }
 
-  .row2 {
-    height: 150px;
+  nav {
+    ul {
+      display: flex;
+      justify-content: space-around;
+      background: $primary-color;
+      list-style: none;
+      text-decoration: none;
+
+      li {
+        color: $alternative-color;
+        //padding-left: 15px;
+
+        &:hover {
+          color: $another-color;
+        }
+
+        a {
+          color: $alternative-color;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  p {
+    background: make-greener(grey);
+  }
+
+  img {
+    width: 10%;
+  }
+
+  .box {
+    height: 700px;
   }
 }
