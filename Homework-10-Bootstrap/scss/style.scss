@@ -154,6 +154,7 @@ $textColorGrey: #787878;
 
   .color-img:hover .pe-7s-look {
     display: flex;
+    cursor: pointer;
   }
 
   .color-img:hover {
@@ -172,4 +173,35 @@ $textColorGrey: #787878;
     height: 300px;
   }
   // Chess block
+
+  // Load more work
+  .load-more-work {
+    height: 100px;
+    background: #f5f5f5;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: $textColorGrey;
+  }
+  // Load more work
+
+  //
+  .work-process {
+    height: 420px;
+
+    article {
+      max-width: 620px;
+
+      h2 {
+        @include h2-text;
+      }
+
+      p {
+        font-family: "Nunito Sans", sans-serif;
+        font-style: 16px;
+        color: $textColorGrey;
+      }
+    }
+  }
 }
