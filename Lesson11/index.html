@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Lesson 10 Bootstrap</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row box">
+        <div class="col border bg-light rounded align-self-center item">1</div>
+        <div class="col border bg-light align-self-end item">2</div>
+        <div class="col border bg-light item">3</div>
+        <div class="col border bg-light item">4</div>
+      </div>
+      <div class="w-100">Break point</div>
+      <div class="row align-items-top box">
+        <div
+          class="col-6 col-sm-4 col-md-2 border bg-light align-self-end item"
+        >
+          5
+        </div>
+        <div class="col-6 col-sm-8 col-md-10 border bg-light item">6</div>
+      </div>
+
+      <div class="w-100">Break point</div>
+
+      <div class="row box">
+        <div class="col-6 col-sm-3 border bg-light item">7</div>
+        <div class="col-6 col-sm-3 border bg-light item">8</div>
+      </div>
+
+      <div class="w-100">Break point</div>
+
+      <div class="row box">
+        <div class="col-6 col-sm-3 border border-success bg-light item">9</div>
+        <div class="col-6 col-sm-9 border border-warning bg-light item">10</div>
+      </div>
+
+      <div class="w-100">Break point</div>
+      <!-- order сортировка -->
+      <div class="row box">
+        <div class="col-4 col-sm-3 border bg-light item">11 - first</div>
+        <div class="col-4 order-12 col-sm-3 border bg-light item">
+          12 - end by sorting
+        </div>
+        <div class="col-4 order-1 col-sm-3 border bg-light item">
+          13 - first by sorting
+        </div>
+      </div>
+
+      <div class="w-100">Break point</div>
+      <!-- offset-md-num. смещение -->
+      <div class="row box">
+        <div class="col-md-4 col-sm-6 border bg-light item">14</div>
+        <div
+          class="col-md-4 col-sm-2 offset-md-4 offset-sm-2 border bg-light item"
+        >
+          15
+        </div>
+      </div>
+
+      <div class="w-100">Break point</div>
+      <!-- Вложенность столбцов -->
+      <div class="row box">
+        <div class="col-sm-6 border bg-light item">16 - First level</div>
+        <div class="row row2">
+          <div class="col-sm-6 col-8 border bg-light item">
+            17 - Second level
+          </div>
+          <div class="col-sm-6 col-4 border bg-light item">
+            18 - Third level
+          </div>
+        </div>
+      </div>
+
+      <div class="w-100">Break point</div>
+      <!-- Вложенность столбцов -->
+      <div class="row box">
+        <div class="col-sm-6 border bg-light item visible">19</div>
+        <div class="col-sm-6 col-8 border bg-light item hidden-sm-up">20</div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/bootstrap.min.js"></script>
+  </body>
+</html>
