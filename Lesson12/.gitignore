@@ -1,0 +1,10 @@
+*.exe
+*.log
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+package-lock.json
+node_modules
