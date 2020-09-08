@@ -1,0 +1,29 @@
+@mixin mainFont {
+  font-family: Helvetica, sans-serif;
+  font-size: 1.1em;
+  font-weight: 700;
+}
+// function
+@function make-greener($value) {
+  @return $value;
+}
+
+.container {
+  p {
+    background: make-greener(#dcdcdd);
+    color: rgb(32, 163, 32);
+    @include mainFont;
+
+    span {
+      color: darkred;
+      @include mainFont;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    a {
+      text-decoration: none;
+      color: red;
+    }
+  }
+}
