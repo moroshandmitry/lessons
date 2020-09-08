@@ -10,12 +10,61 @@
       rel="stylesheet"
       href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
     />
-    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="./css/style.css" />
-    <title>Lesson 13 (...) 08.09.2020</title>
+    <title>Lesson 13 (github) 08.09.2020</title>
   </head>
 
   <body>
+    <div class="container">
+      <div>Hello world from origin/developer</div>
+      <p>git remote remove origin - удалить ссылку на текущий репозитрорий</p>
+      <p>
+        git remote add origin git@github.com:moroshandmitry/test.git
+        <span> далее на свою репу которая нужна </span>
+      </p>
+      <p>git init</p>
+      <p>git add README.md</p>
+      <p>git commit -m "first commit"</p>
+      <p>git branch -M master</p>
+      <p>master локально</p>
+      <p>origin удалённо</p>
+      <p>git branch newBranch <span>создаёт ветку newBranch</span></p>
+      <p>git branch - где находишься</p>
+      <p>git checkout newBranch <span>перейти в ветку newBranch</span></p>
+      <p>git add * <span>добавить все файлы</span></p>
+      <p>git add . <span>файлы которые изменились</span></p>
+      <p>git commit -m "Update index.html (developer branch)"</p>
+      <p>git log <span>история комитов</span></p>
+      <p>git remote add origin git@github.com:moroshandmitry/test.git</p>
+      <p>git push -u origin master</p>
+      <p>git merge nameBranch <span>объеденить ветки</span></p>
+      <p>
+        git commit --amed
+        <span>небольшое исправление лучше не использовать</span>
+      </p>
+      <p>
+        git pull origin master
+        <span>
+          получить изменения если на проекте работают несколько человек
+        </span>
+      </p>
+
+      <p>
+        .gitignore
+        <a href="https://github.com/github/gitignore"
+          >https://github.com/github/gitignore</a
+        >
+      </p>
+      <p>
+        Полезый сайт <a href="https://githowto.com/">https://githowto.com/</a>
+      </p>
+    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
@@ -28,6 +77,10 @@
       integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
       crossorigin="anonymous"
     ></script>
-    <script src="../js/bootstrap.min.js"></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
