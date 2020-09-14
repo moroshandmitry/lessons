@@ -33,3 +33,10 @@ console.log(window.i);
 console.log(k);
 console.log(text);
 console.log(result);
+
+try {
+  alklert("Welcome guest!");
+}
+catch(err) {
+  document.getElementById("demo").innerHTML = err.message;
+}
