@@ -9,7 +9,7 @@ const k = 3; // Constant doesn't change
 const text = "Hello, World";
 
 const a = 40,
-  b = 2;
+      b = 2;
 const result = `${a + b} dollars`;
 
 let c = parseInt("0");
