@@ -83,7 +83,7 @@ const getBigNum = (item1, item2) => {
 
 getBigNum(333, 777);
 
-
+// CreateObjectHuman
 const human = {
     firstName: 'Dmitry',
     lastName: 'Moroshan',
