@@ -72,7 +72,48 @@ for (let iter = 1; iter <= 7; iter++) {
     }
 }
 
-// Get Time
+// function getBigNum param
+const getBigNum = (item1, item2) => {
+    if (item1 > item2) {
+        console.log(item1);
+    } else {
+        console.log(item2);
+    }
+}
+
+getBigNum(333, 777);
+
+
+const human = {
+    firstName: 'Dmitry',
+    lastName: 'Moroshan',
+    yearOfBirth: 1993,
+    married: true,
+
+    getFullName: function () {
+        return this.firstName + " " + this.lastName;
+    },
+
+    getAge: function () {
+        return new Date().getFullYear() - this.yearOfBirth;
+    },
+
+    getMarried: function () {
+        if (this.married) {
+            return `Married: ${true}`;
+        } else {
+            return `Married: ${false}`;
+        };
+    },
+
+
+};
+
+console.log(human.getFullName());
+console.log(human.getAge());
+console.log(human.getMarried());
+
+// Get Time1
 setInterval(function () {
     date = new Date(),
         h = date.getHours(),
