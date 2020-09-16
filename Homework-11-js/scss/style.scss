@@ -1,0 +1,19 @@
+.my-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .my-slider-btn {
+      background-color: transparent;
+      border: none;
+      font-size: 1.3em;
+      color: grey;
+    }
+  
+    .my-slider-img {
+      width: 40%;
+      height: 20%;
+    }
+    
+  }
+  
