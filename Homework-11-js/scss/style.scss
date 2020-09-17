@@ -1,23 +1,22 @@
 .container {
-
   .my-slider {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
     .my-slider-btn {
       background-color: transparent;
       border: none;
       font-size: 1.3em;
       color: rgb(124, 99, 99);
     }
-  
+
     .my-slider-img {
       width: 40%;
       height: 20%;
     }
   }
-  
+
   .time {
     display: flex;
     justify-content: center;
@@ -27,4 +26,31 @@
     color: darkred;
   }
 
+  .my-calculator {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: aliceblue;
+    padding: 20px;
+    border: 1px solid black;
+
+    .operations-block {
+      button {
+        height: 40px;
+        width: 40px;
+        margin: 20px;
+      }
+    }
+
+    .inputs-block {
+      .input-block {
+        display: inline-block;
+        padding: 10px;
+
+        label {
+          display: block;
+        }
+      }
+    }
+  }
 }

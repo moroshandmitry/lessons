@@ -46,7 +46,6 @@ switch (x) {
 }
 
 function squareOfNumber(count) {
-  let n = 0;
   for (let i = 0; i <= count; i++) {
     console.log(i ** 2);
   }

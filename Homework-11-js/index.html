@@ -23,23 +23,54 @@
   <body>
     <div class="container">
       <h1>Open console</h1>
-      
+
       <div class="my-slider">
-      
-        <button class="my-slider-btn" onclick="prev()">
-        &lt;
-        </button>
-          
-        <img class="my-slider-img" src="http://pvbk.spb.ru/inc/slider/imgs/planet0.jpg" />
-          
-        <button class="my-slider-btn" onclick="next()">
-        &gt;
-        </button>
-        
+        <button class="my-slider-btn" onclick="prev()">&lt;</button>
+
+        <img class="my-slider-img" src="./img/planet0.jpg" />
+
+        <button class="my-slider-btn" onclick="next()">&gt;</button>
       </div>
 
       <span class="time"></span>
-    
+
+      <div class="my-calculator">
+        <div class="operations-block">
+          <button class="operation-button">+</button>
+          <button class="operation-button">-</button>
+          <button class="operation-button">*</button>
+          <button class="operation-button">/</button>
+        </div>
+        <div class="separator">
+          <hr />
+        </div>
+        <div class="inputs-block">
+          <div class="input-block">
+            <label>Number 1</label>
+            <input type="number" id="number1" />
+          </div>
+          <div class="input-block">
+            <label>Number 2</label>
+            <input type="number" id="number2" />
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <p id="text">Some text here</p>
+        <button class="btn btn-danger" onclick="changeColor('red');">
+          red
+        </button>
+        <button class="btn btn-success" onclick="changeColor('green');">
+          green
+        </button>
+        <button class="btn btn-primary" onclick="changeColor('blue');">
+          blue
+        </button>
+      </div>
+
+      <button class="btn-event btn btn-warning">Click me!</button>
+      <p class="event"></p>
     </div>
     <!-- defer асинхронная загрузка по порядку -->
     <script defer src="./js/script.js"></script>
