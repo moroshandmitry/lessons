@@ -86,7 +86,7 @@ const human = {
   married: true,
 
   getFullName: function () {
-    return this.firstName + " " + this.lastName;
+    return `${this.firstName} ${this.lastName}`;
   },
 
   getAge: function () {
@@ -171,6 +171,7 @@ for (let i = 0; i < operationButtons.length; i++) {
 const input1 = document.getElementById("number1");
 const input2 = document.getElementById("number2");
 
+
 function makeOperation(operationCode) {
   let number1 = Number(input1.value);
   let number2 = Number(input2.value);
@@ -183,7 +184,15 @@ function makeOperation(operationCode) {
   } else if (operationCode === "*") {
     result = number1 * number2;
   } else if (operationCode === "/") {
-    result = number1 / number2;
+      if(number2 !== 0) {
+        result = number1 / number2;
+      }
+      else {
+        result = Number.isFinite(number1 / number2);
+          if(result === false) {
+            alert('Cannot devide by zero!');
+          }
+      }
   } else {
     window.alert("Operation is unknown");
   }
@@ -199,5 +208,5 @@ function changeColor(newColor) {
 // addEventListener
 document.querySelector(".btn-event").addEventListener("click", function () {
   document.querySelector(".event").innerHTML =
-    "<h1>Lorem ipsum dolor, sit amet consectetur adipisicing.</h1>";
+    "<h3>Lorem ipsum dolor, sit amet consectetur adipisicing.</h3>";
 });

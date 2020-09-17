@@ -17,13 +17,14 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./css/style.css" />
-    <title>Homework 11 (JS Practics)</title>
+    <title>Homework (JS Practics)</title>
   </head>
 
   <body>
     <div class="container">
       <h1>Open console</h1>
 
+      <!-- Slider -->
       <div class="my-slider">
         <button class="my-slider-btn" onclick="prev()">&lt;</button>
 
@@ -31,15 +32,19 @@
 
         <button class="my-slider-btn" onclick="next()">&gt;</button>
       </div>
+      <!-- Slider -->
 
+      <!-- Clock -->
       <span class="time"></span>
+      <!-- Clock -->
 
+      <!-- Calculator -->
       <div class="my-calculator">
         <div class="operations-block">
-          <button class="operation-button">+</button>
-          <button class="operation-button">-</button>
-          <button class="operation-button">*</button>
-          <button class="operation-button">/</button>
+          <button class="operation-button btn btn-primary">+</button>
+          <button class="operation-button btn btn-primary">-</button>
+          <button class="operation-button btn btn-primary">*</button>
+          <button class="operation-button btn btn-primary">/</button>
         </div>
         <div class="separator">
           <hr />
@@ -47,17 +52,21 @@
         <div class="inputs-block">
           <div class="input-block">
             <label>Number 1</label>
-            <input type="number" id="number1" />
+            <input type="number" id="number1" value="0" />
           </div>
           <div class="input-block">
             <label>Number 2</label>
-            <input type="number" id="number2" />
+            <input type="number" id="number2" value="0" />
           </div>
         </div>
       </div>
+      <!-- Calculator -->
 
-      <div>
-        <p id="text">Some text here</p>
+      <!-- Text color -->
+      <div class="text-color d-flex justify-content-center">
+        <h3 id="text">Some text here</h3>
+      </div>
+      <div class="row d-flex justify-content-center">
         <button class="btn btn-danger" onclick="changeColor('red');">
           red
         </button>
@@ -68,9 +77,15 @@
           blue
         </button>
       </div>
-
-      <button class="btn-event btn btn-warning">Click me!</button>
-      <p class="event"></p>
+      
+      <!-- Text color -->
+      <div class="row d-flex justify-content-center mt-3">
+        <button class="btn-event btn btn-warning">Click me!</button>
+      </div>
+      <div class="row d-flex justify-content-center">
+        <p class="event"></p>
+      </div>
+      
     </div>
     <!-- defer асинхронная загрузка по порядку -->
     <script defer src="./js/script.js"></script>

@@ -1,4 +1,5 @@
 .container {
+  // Slider
   .my-slider {
     display: flex;
     justify-content: center;
@@ -9,14 +10,19 @@
       border: none;
       font-size: 1.3em;
       color: rgb(124, 99, 99);
+
+      &:focus {
+        outline: none;
+      } 
     }
 
     .my-slider-img {
-      width: 40%;
-      height: 20%;
+      width: 50%;
     }
   }
+  // Slider
 
+  // Clock
   .time {
     display: flex;
     justify-content: center;
@@ -25,14 +31,16 @@
     font-weight: 700;
     color: darkred;
   }
+  // Clock
 
+  // Calculator
   .my-calculator {
     max-width: 500px;
     margin: 0 auto;
     text-align: center;
-    background-color: aliceblue;
+    background-color: #a8d0fa;
     padding: 20px;
-    border: 1px solid black;
+    border: 1px solid #48a1ff;
 
     .operations-block {
       button {
@@ -53,4 +61,5 @@
       }
     }
   }
+  // Calculator
 }
