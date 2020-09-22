@@ -94,3 +94,28 @@ const newString = (str1, str2) => {
     console.log(str2);
   }
 }
+
+// clone array
+const cloneArray = ['lorem', 'ipsum', 'is', 'simply', 'dummy'];
+
+const clone = cloneArray.slice(0);
+console.log(clone);
+
+// clone and change 0 index of array
+const myArray = [0,1,2,3,4,5];
+const myNewArray = myArray;
+
+myNewArray[0] = 'LOREM';
+
+console.log(myArray); // [LOREM,1,2,3,4,5];
+console.log(myNewArray); // [LOREM,1,2,3,4,5];
+
+const clonedArray = myArray.slice();
+clonedArray[0] = 'DOLOR';
+
+console.log(clonedArray); // [DOLOR,1,2,3,4,5];
+
+// Neasted array
+const arr2 = [1, [3, 2], [3, [4]]];
+console.log(arr2[2][1]); // array 4
+console.log(arr2[2][1][0]); // 4
