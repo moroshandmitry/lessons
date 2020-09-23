@@ -119,3 +119,16 @@ console.log(clonedArray); // [DOLOR,1,2,3,4,5];
 const arr2 = [1, [3, 2], [3, [4]]];
 console.log(arr2[2][1]); // array 4
 console.log(arr2[2][1][0]); // 4
+
+// anonymous function
+( () => {
+  console.log('We are anonymous');
+} )();
+
+const anonymOne = () => `it have return without {}`; // it have return without {}
+console.log(anonymOne());
+
+const anonymTwo = () => {
+  return '\'it worked with {} and return\'';
+};
+console.log(anonymTwo());
