@@ -58,7 +58,7 @@ for (let i = 0; i < Arr22.length; i++) {
 }
 console.log(sum);
 
-// let Arr3 = new Array();
+// let Arr3 = new Array(3);
 // let cnt = 0;
 // while (1) {
 //   let txt = prompt("Input elements in your array", 0);
