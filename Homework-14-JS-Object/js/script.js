@@ -1,21 +1,21 @@
 // Time
-setInterval(function(){
+setInterval(function () {
   const date = new Date();
   let hours = date.getHours();
   let minutes = date.getMinutes();
   let seconds = date.getSeconds();
-  hours = (hours < 10) ? `0${hours}` : `${hours}`;
-  minutes = (minutes < 10) ? `0${minutes}` : `${minutes}`;
-  seconds = (seconds < 10) ? `0${seconds}` : `${seconds}`;
+  hours = hours < 10 ? `0${hours}` : `${hours}`;
+  minutes = minutes < 10 ? `0${minutes}` : `${minutes}`;
+  seconds = seconds < 10 ? `0${seconds}` : `${seconds}`;
 
-document.querySelector(".time").innerHTML = `${hours}:${minutes}:${seconds}`;  
+  document.querySelector(".time").innerHTML = `${hours}:${minutes}:${seconds}`;
 }, 1000);
 
 // Array objects
-var anotherDinosaurs = [  
+var anotherDinosaurs = [
   { name: "Тираннозавр рекс", period: "Верхнемеловой" },
   { name: "Стегозавр", period: "Верхнеюрский" },
-  { name: "Платеозавр", period: "Триасовый" }
+  { name: "Платеозавр", period: "Триасовый" },
 ];
 console.log(anotherDinosaurs[0]); // { name: "Тираннозавррекс", period: "Верхнемеловой" }
 console.log(anotherDinosaurs[0]["name"]); // Тираннозавр рекс
@@ -44,25 +44,25 @@ console.log(`Jimmy owes ${owedMoney["Jimmy"]}$`); // 8
 console.log(owedMoney); // Object { Jimmy: 8, Anna: 7 }
 
 // movies
-const movies = { 
-  "В поисках Немо": { 
+const movies = {
+  "В поисках Немо": {
     releaseDate: 2003,
     duration: 100,
     actors: ["Альберт Брукс", "Эллен Дедженерес", "Александр Гоулд"],
-    format: "DVD"
+    format: "DVD",
   },
   "Звездные войны: Эпизод VI — Возвращение джедая": {
     releaseDate: 1983,
     duration: 134,
     actors: ["МаркХэмилл", "ХаррисонФорд", "КэрриФишер"],
-    format: "DVD"
+    format: "DVD",
   },
   "Гарри Поттер и Кубок огня": {
     releaseDate: 2005,
     duration: 157,
     actors: ["ДэниелРэдклифф", "ЭммаУотсон", "РупертГринт"],
-    format: "Blu-ray"
-  }
+    format: "Blu-ray",
+  },
 };
 
 console.log(movies["В поисках Немо"]); // Object { releaseDate: 2003, duration: 100, actors: (3) […], format: "DVD" }
@@ -75,7 +75,7 @@ const cars = {
   releaseDate: 2006,
   duration: 117,
   actors: ["Оуэн Уилсон", "Бонни Хант", "Пол Ньюман"],
-  format: "Blu-ray"
+  format: "Blu-ray",
 };
 movies["Тачки"] = cars;
 console.log(Object.keys(movies));
@@ -83,8 +83,8 @@ console.log(Object.keys(movies));
 // scores
 const scores = {
   maxim: 0,
-  dmitry: 0
-}
+  dmitry: 0,
+};
 scores.maxim += 3;
 scores.dmitry += 7;
 
@@ -95,19 +95,24 @@ console.log(scores);
 
 // How to extract the number 123 from this object with one line of JavaScript code? Test your solution by running it in the console.
 const myCrazyObject = {
-  "name": "Нелепый объект",
-  "some array": [7, 9, {
-    purpose: "путаница",
-    number: 123
-  }, 3.3],
-  "random animal": "Банановая акула"
+  name: "Нелепый объект",
+  "some array": [
+    7,
+    9,
+    {
+      purpose: "путаница",
+      number: 123,
+    },
+    3.3,
+  ],
+  "random animal": "Банановая акула",
 };
 console.log(myCrazyObject["some array"][2].number); // 123
 console.log(myCrazyObject["some array"][2]["number"]); // 123
 
 // terms
 const name = "Николай";
-console.log("Привет, "+ name);
+console.log("Привет, " + name);
 if (name.length > 6) {
   console.log("Ну и длиннющее же у Вас имя!");
 } else {
@@ -137,14 +142,18 @@ if (anotherName === anotherName) {
 // While
 let sheepCountedWhile = 10;
 while (sheepCountedWhile <= 10) {
-  console.log(`Посчитано овец циклом While: ${sheepCountedWhile} из ${sheepCountedWhile} все на месте!`);
+  console.log(
+    `Посчитано овец циклом While: ${sheepCountedWhile} из ${sheepCountedWhile} все на месте!`
+  );
   sheepCountedWhile++;
 }
 
 // for
 const sheepCountedFor = 10;
 for (let i = 0; i < sheepCountedFor; i++) {
-  console.log(`Посчитано овец циклом for: ${sheepCountedFor} из ${sheepCountedFor} все на месте!`);
+  console.log(
+    `Посчитано овец циклом for: ${sheepCountedFor} из ${sheepCountedFor} все на месте!`
+  );
 }
 
 // String + animals[i]
@@ -161,12 +170,12 @@ for (let i = 0; i < named.length - 1; i++) {
 
 // 2 4 8 16...
 for (let x = 2; x < 1000; x *= 2) {
-  console.log(x); 
+  console.log(x);
 }
 
 // 3 9 27...
 for (let y = 3; y < 1000; y *= 3) {
-  console.log(y); 
+  console.log(y);
 }
 
 // 3 9 27...
@@ -178,8 +187,8 @@ while (z < 1000) {
 
 // String + anotherAnimals[i]
 const anotherAnimals = ["Кот", "Рыба", "Лемур", "Комодский варан"];
-for(let i = 0; i < anotherAnimals.length; i++) {
-  anotherAnimals[i] = `${anotherAnimals[i]} - прекрасное животное`
+for (let i = 0; i < anotherAnimals.length; i++) {
+  anotherAnimals[i] = `${anotherAnimals[i]} - прекрасное животное`;
 }
 console.log(anotherAnimals);
 
@@ -197,13 +206,13 @@ for (let i = 0; i < input.length; i++) {
 
 function hackLang(input) {
   switch (input) {
-    case 'a':
+    case "a":
       return "4";
-    case 'e':
+    case "e":
       return "3";
-    case 'i':
+    case "i":
       return "1";
-    case 'o':
+    case "o":
       return "0";
     default:
       return input;
@@ -232,52 +241,68 @@ console.log(output); // j4v4scr1pt 1s 4w3s0m3
 //   console.log("Чтож, не проблема. Все равно ты молодец!");
 // }
 
-// Создаем массив со словами
-const words = [
-  "чихание"
+// guess the word
+let curentQuestion;
+const askInput = document.querySelector(".answer");
+const tries = document.querySelector(".game-try");
+const letters = [];
+let counter = 10;
+
+const questions = [
+  {
+    question: "Человеческие способности довольно велики. Например, мы можем собственными силами разогнать воздушный поток до 150–170 км/ч. В процессе чего человек способен произвести такой воздушный поток?",
+    answer: "Чихание",
+  },
+  {
+    question: "Назовите лучшего актера человечества?",
+    answer: "Шварцнегер",
+  },
 ];
 
-// Создадим нужный вопрос для слова которое нужно отгадать
-if (words[0]) {
-  document.querySelector(".question").innerHTML = "Человеческие способности довольно велики. Например, мы можем собственными силами разогнать воздушный поток до 150–170 км/ч. В процессе чего человек способен произвести такой воздушный поток?";
+function startTheGame() {
+  curentQuestion = questions[Math.floor(Math.random() * questions.length)];
+  document.querySelector(".question").innerHTML = curentQuestion["question"];
+  findTheWord();
+  askInput.addEventListener("input", typeLetter);
 }
 
-// Выбираем случайное слово
-const word = words[Math.floor(Math.random() * words.length)];
-
-// Создаем итоговый массив
-const answerArray = [];
-for (let i = 0; i < word.length; i++) {
-  answerArray[i] = "_";
+function typeLetter(e) {
+  if (e.data) {
+    calcCounter(e.data)
+    letters.push(e.data);
+  }
+  findTheWord();
 }
-let remainingLetters = word.length;
 
-// Игровой цикл
-while (remainingLetters > 0) {
-
-  // Показываем состояние игры
-  document.querySelector(".game-state").innerHTML = answerArray.join(" ");
-
-  // Запрашиваем вариант ответа
-  const guess = prompt("Угадайте букву, или нажмите Отмена для выхода из игры.");
-  if (guess === null) {
-    // Выходим из игрового цикла
-    break;
-  }
-  else if (guess.length !== 1) {
-    alert("Пожалуйста, введите одиночную букву!");
-  }
-  else {
-    // Обновляем состояние игры
-    for (let j = 0; j < word.length; j++) {
-      if (word[j] === guess) {
-        answerArray[j] = guess;
-        remainingLetters--;
-      }
-    }
-  }
-  // Конец игрового цикла
+function findTheWord() {
+  const wordArray = curentQuestion["answer"].split("").map((item) => {
+    const newItem = letters.find(
+      (ltr) => ltr.toLowerCase() === item.toLowerCase()
+    );
+    return newItem || "_";
+  }).join(" ");
+  watchWord(wordArray);
+  document.querySelector(".letters").innerHTML = wordArray;
 }
-// Отображаем ответ и поздравляем игрока
-document.querySelector(".game-result").innerHTML = answerArray.join(" ");
-document.querySelector(".game-winner").innerHTML = `Отлично было загаданно слово ${word} приз в студию`;
+
+function calcCounter(val) {
+  if (!curentQuestion["answer"].includes(val)) {
+    --counter;
+    tries.innerHTML = `У Вас осталось ${counter} попыток!`;
+  } else if (letters.find(item => item === val)) {
+    tries.innerHTML = `Вы уже писали эту букву! У Вас осталось ${counter} попыток!`;
+  }
+}
+
+function watchWord(myWord) {
+  if (!myWord.includes("_")) {
+    document.querySelector(".game-result").innerHTML = `Отлично было загаданно слово ${curentQuestion["answer"]}`;
+    askInput.parentNode.removeChild(askInput);
+  }
+  if (counter === 0) {
+    document.querySelector(".game-result").innerHTML = "Вы проиграли";
+    askInput.parentNode.removeChild(askInput);
+  }
+}
+startTheGame();
+// guess the word
