@@ -187,4 +187,97 @@ const alphabet = "абвгдеёжзийклмнопрстуфхцчшщъыьэ
 const randomSimbol = Math.floor(Math.random() * alphabet.length);
 console.log(alphabet.charAt(randomSimbol));
 
-// Nick Morgan - JavaScript for Kids p. 108
+// h4ck3r sp34k
+const input = "javascript is awesome";
+let output = "";
+
+for (let i = 0; i < input.length; i++) {
+  output += hackLang(input[i]);
+}
+
+function hackLang(input) {
+  switch (input) {
+    case 'a':
+      return "4";
+    case 'e':
+      return "3";
+    case 'i':
+      return "1";
+    case 'o':
+      return "0";
+    default:
+      return input;
+  }
+}
+console.log(input); // javascript is awesome
+console.log(output); // j4v4scr1pt 1s 4w3s0m3
+
+// // game
+// const firstName = prompt("Как Вас зовут?");
+
+// if (firstName === null) {
+//   console.log("Вы отменили");
+// }
+// else if (firstName === "") {
+//   console.log("Вы не ввели имя");
+// }
+// else {
+//   console.log("Привет, "+ firstName);
+// }
+
+// const likesCats = confirm("Тебе нравятся кошки?");
+// if (likesCats) {
+//   console.log("Ты классная кошка!");
+// } else {
+//   console.log("Чтож, не проблема. Все равно ты молодец!");
+// }
+
+// Создаем массив со словами
+const words = [
+  "чихание"
+];
+
+// Создадим нужный вопрос для слова которое нужно отгадать
+if (words[0]) {
+  document.querySelector(".question").innerHTML = "Человеческие способности довольно велики. Например, мы можем собственными силами разогнать воздушный поток до 150–170 км/ч. В процессе чего человек способен произвести такой воздушный поток?";
+}
+
+// Выбираем случайное слово
+const word = words[Math.floor(Math.random() * words.length)];
+
+// Создаем итоговый массив
+const answerArray = [];
+for (let i = 0; i < word.length; i++) {
+  answerArray[i] = "_";
+}
+let remainingLetters = word.length;
+
+// Игровой цикл
+while (remainingLetters > 0) {
+
+  // Показываем состояние игры
+  document.querySelector(".game-state").innerHTML = answerArray.join(" ");
+
+  // Запрашиваем вариант ответа
+  const guess = prompt("Угадайте букву, или нажмите Отмена для выхода из игры.");
+  if (guess === null) {
+    // Выходим из игрового цикла
+    break;
+  }
+  else if (guess.length !== 1) {
+    alert("Пожалуйста, введите одиночную букву!");
+  }
+  else {
+    // Обновляем состояние игры
+    for (let j = 0; j < word.length; j++) {
+      if (word[j] === guess) {
+        answerArray[j] = guess;
+        remainingLetters--;
+      }
+    }
+  }
+  // Конец игрового цикла
+}
+// Отображаем ответ и поздравляем игрока
+document.querySelector(".game-result").innerHTML = answerArray.join(" ");
+document.querySelector(".game-winner").innerHTML = `Отлично было загаданно слово ${word} приз в студию`;
