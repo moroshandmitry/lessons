@@ -254,9 +254,40 @@ const questions = [
     answer: "Чихание",
   },
   {
-    question: "Назовите лучшего актера человечества?",
-    answer: "Шварцнегер",
+    question: "Как называется остров где располагается статуя Свободы? Подсказка - \"США\"",
+    answer: "Остров Свободы",
   },
+  {
+    question: "Где находится пирамида Хеопса и большой Сфинкс? Подсказка - \"Египед\"",
+    answer: "Гиза",
+  },
+  {
+    question: "Где находится колицей? Подсказка - \"Италия\"",
+    answer: "Рим",
+  },
+  {
+    question: "Где находится Тадж-Махал? Подсказка - \"Индия\"",
+    answer: "Агра",
+  },
+  {
+    question: "Как называется королевство где находится Стоунхендж? Подсказка - \"Великобритания\"",
+    answer: "Уилтшир",
+  },
+  {
+    question: "Где находятся висячие сады Семирамиды?",
+    answer: "Вавилон",
+  },
+  {
+    question: "Где находится статуя Зевса? Подсказка - \"Греция\"",
+    answer: "Олимпия",
+  },
+  {
+    question: "Где находится храм Артемиды? Подсказка - \"Турция\"",
+    answer: "Эфес",
+  },
+
+
+
 ];
 
 function startTheGame() {
@@ -296,7 +327,7 @@ function calcCounter(val) {
 
 function watchWord(myWord) {
   if (!myWord.includes("_")) {
-    document.querySelector(".game-result").innerHTML = `Отлично было загаданно слово ${curentQuestion["answer"]}`;
+    document.querySelector(".game-result").innerHTML = `Отлично было загаданно слово ${curentQuestion["answer"]}!`;
     askInput.parentNode.removeChild(askInput);
   }
   if (counter === 0) {
