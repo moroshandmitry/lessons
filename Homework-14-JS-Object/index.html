@@ -15,19 +15,27 @@
   <div class="container">
     <h1>Open console</h1>
     <span class="time d-flex justify-content-center">00:00:00</span>
-    <p class="question"></p>
-    <p class="game-state"></p>
-    <p class="game-try"></p>
+
+    <!-- guess the word -->
     <div>
-      <label>Введите букву!</label>
-      <input type="text" class="answer" />
+      <div>
+        <p class="question"></p>
+        <p class="game-state"></p>
+        <p class="game-try"></p>
+      </div>
+      <div>
+        <label>Введите букву!</label>
+        <input type="text" size="15" onfocus="value=''" class="answer" />
+      </div>
+      <div>
+        <p>Угаданные буквы — <span class="letters"></span></p>
+      </div>
+      <div>
+        <p class="game-result"></p>
+        <p class="game-winner"></p>
+      </div>
     </div>
-    <div>
-      <label>Буковки</label>
-      <div class="letters"></div>
-    </div>
-    <p class="game-result"></p>
-    <p class="game-winner"></p>
+    <!-- guess the word -->
   </div>
   <!-- defer асинхронная загрузка по порядку -->
   <script defer src="./js/script.js"></script>

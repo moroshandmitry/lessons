@@ -95,16 +95,8 @@ console.log(scores);
 
 // How to extract the number 123 from this object with one line of JavaScript code? Test your solution by running it in the console.
 const myCrazyObject = {
-  name: "Нелепый объект",
-  "some array": [
-    7,
-    9,
-    {
-      purpose: "путаница",
-      number: 123,
-    },
-    3.3,
-  ],
+  name: "Нелепый объект", 
+  "some array": [7,  9,  {  purpose: "путаница",      number: 123, },  3.3, ],
   "random animal": "Банановая акула",
 };
 console.log(myCrazyObject["some array"][2].number); // 123
@@ -255,7 +247,7 @@ const questions = [
   },
   {
     question: "Как называется остров где располагается статуя Свободы? Подсказка - \"США\"",
-    answer: "Остров Свободы",
+    answer: "Свободы",
   },
   {
     question: "Где находится пирамида Хеопса и большой Сфинкс? Подсказка - \"Египед\"",
@@ -310,7 +302,7 @@ function findTheWord() {
     const newItem = letters.find(
       (ltr) => ltr.toLowerCase() === item.toLowerCase()
     );
-    return newItem || "_";
+    return newItem || "__";
   }).join(" ");
   watchWord(wordArray);
   document.querySelector(".letters").innerHTML = wordArray;
@@ -321,7 +313,7 @@ function calcCounter(val) {
     --counter;
     tries.innerHTML = `У Вас осталось ${counter} попыток!`;
   } else if (letters.find(item => item === val)) {
-    tries.innerHTML = `Вы уже писали эту букву! У Вас осталось ${counter} попыток!`;
+    tries.innerHTML = `Вы уже писали эту букву! У Вас осталось "${counter}" попыток!`;
   }
 }
 
@@ -337,3 +329,29 @@ function watchWord(myWord) {
 }
 startTheGame();
 // guess the word
+
+// Draw cats
+const printMultipleTimes = function (howManyTimes, whatToDraw) { 
+  for (var i = 0; i < howManyTimes; i++) { 
+    console.log(i + " " + whatToDraw);  
+  }
+ };
+ printMultipleTimes(5, "=^.^=");
+
+ // Human object
+ const human = {
+  firstName: 'DMITRY',
+  lastName: 'MOROSHAN',
+  getFullName: function() {
+    return `${this.firstName} ${this.lastName}`
+  }
+ }
+
+console.log(human.age || human.getFullName());
+// create property in human
+human.age = "26 years";
+// rename property in human
+human.firstName = "Dmitry";
+// rename property in human
+human.lastName = "Moroshan";
+console.log(`${human.getFullName()} ${human.age}`);
