@@ -95,8 +95,8 @@ console.log(scores);
 
 // How to extract the number 123 from this object with one line of JavaScript code? Test your solution by running it in the console.
 const myCrazyObject = {
-  name: "Нелепый объект", 
-  "some array": [7,  9,  {  purpose: "путаница",      number: 123, },  3.3, ],
+  name: "Нелепый объект",
+  "some array": [7, 9, { purpose: "путаница", number: 123, }, 3.3,],
   "random animal": "Банановая акула",
 };
 console.log(myCrazyObject["some array"][2].number); // 123
@@ -331,21 +331,21 @@ startTheGame();
 // guess the word
 
 // Draw cats
-const printMultipleTimes = function (howManyTimes, whatToDraw) { 
-  for (var i = 0; i < howManyTimes; i++) { 
-    console.log(i + " " + whatToDraw);  
+const printMultipleTimes = function (howManyTimes, whatToDraw) {
+  for (var i = 0; i < howManyTimes; i++) {
+    console.log(i + " " + whatToDraw);
   }
- };
- printMultipleTimes(5, "=^.^=");
+};
+printMultipleTimes(5, "=^.^=");
 
- // Human object
- const human = {
+// Human object
+const human = {
   firstName: 'DMITRY',
   lastName: 'MOROSHAN',
-  getFullName: function() {
+  getFullName: function () {
     return `${this.firstName} ${this.lastName}`
   }
- }
+}
 
 console.log(human.age || human.getFullName());
 // create property in human
