@@ -338,7 +338,7 @@ const printMultipleTimes = function (howManyTimes, whatToDraw) {
  };
  printMultipleTimes(5, "=^.^=");
 
- // Human object
+ // objects transmitted by links
  const human = {
   firstName: 'DMITRY',
   lastName: 'MOROSHAN',
@@ -347,11 +347,35 @@ const printMultipleTimes = function (howManyTimes, whatToDraw) {
   }
  }
 
-console.log(human.age || human.getFullName());
+console.log(human.age || human.getFullName()); // // DMITRY MOROSHAN (property age isn't exist)
 // create property in human
 human.age = "26 years";
 // rename property in human
 human.firstName = "Dmitry";
 // rename property in human
 human.lastName = "Moroshan";
-console.log(`${human.getFullName()} ${human.age}`);
+// give method getFullName() + property age
+console.log(`${human.getFullName()} ${human.age}`); // Dmitry Moroshan 26 years
+// create link for human
+const xHuman = human;
+// delete human.age
+delete xHuman.age;
+console.log(`value of age is "undefined" because it was deleted  - ${xHuman.age}`); // undefined
+// check property in object
+console.log("firstName" in human); // true
+console.log("age" in human); // false because it was deleted
+
+// removeLastChild
+function removeLastChild() {
+  const list = document.querySelector(".list-remove-last");
+  list.removeChild(list.lastChild);
+}
+// removeLastChild
+
+// removeFirstChild
+function removeFirstChild() {
+  const list = document.querySelector(".list-remove-first");
+  // list.removeChild(list.firstChild); // worked
+  list.removeChild(list.childNodes[0]);
+}
+// removeFirstChild
