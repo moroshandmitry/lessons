@@ -1,6 +1,10 @@
 {
     "liveServer.settings.port": 5501,
     "editor.fontFamily": "Fira Code",
+<<<<<<< HEAD
+    "editor.fontSize": 14,
+=======
     "editor.fontSize": 15,
+>>>>>>> 537ad4090aa749c33c532d157784dfadcc30ab93
     "editor.fontLigatures": true,
 }
