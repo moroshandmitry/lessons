@@ -35,7 +35,7 @@ switch (new Date().getDay()) {
 console.log(month);
 
 // Task 3
-const  cutStr = "aaa bbb ccc";
+const cutStr = "aaa bbb ccc";
 console.log(cutStr.substr(4, 3)); // starting from 4 element cut 3 elements
 console.log(cutStr.substring(4, 7)); // starting from 4 element and end 7 element
 console.log(cutStr.slice(4, 7)); // starting from 4 element and end 7 element
@@ -105,24 +105,24 @@ console.log(unshiftArray);
 
 // Task 11
 const lastElArray = ["js", "css", "jq"];
-console.log(lastElArray.length -1); // 2
-console.log(lastElArray[lastElArray.length -1]); // jq
+console.log(lastElArray.length - 1); // 2
+console.log(lastElArray[lastElArray.length - 1]); // jq
 
-Array.prototype.last = function() {
+Array.prototype.last = function () {
   return this[this.length - 1];
- }
- console.log(lastElArray.last()); // jq
+}
+console.log(lastElArray.last()); // jq
 
- // Task 12
- const myArray = [1, 2, 3, 4, 5];
- console.log(myArray.slice(0, 3));
+// Task 12
+const myArray = [1, 2, 3, 4, 5];
+console.log(myArray.slice(0, 3));
 
- // Task 13
- const newArr = [1, 2, 3, 4, 5];
- newArr.splice(2, 2, 10, 11);
- console.log(newArr); // [ 1, 2, 10, 11, 5 ]
+// Task 13
+const newArr = [1, 2, 3, 4, 5];
+newArr.splice(2, 2, 10, 11);
+console.log(newArr); // [ 1, 2, 10, 11, 5 ]
 
- // Task 14
+// Task 14
 const newArray = [];
 for (let i = 1; i < 10; i++) {
   let str = "";
@@ -134,7 +134,7 @@ for (let i = 1; i < 10; i++) {
 console.log(newArray);
 
 // Task 15
-const arrayFill = (whatToDraw, howManyTimes) => { 
+const arrayFill = (whatToDraw, howManyTimes) => {
   const arr = [];
   for (let i = 0; i < howManyTimes; i++) {
     arr.push(whatToDraw);
@@ -145,11 +145,12 @@ console.log(arrayFill("x", 5));
 
 // Task 16
 // Как решить 16. Дан массив с числами. Узнайте сколько элементов с начала массива надо сложить, чтобы в сумме получилось больше 10-ти.
+// reduce
 
 // Task 17
 // а можно сделать, чтоб рандом был в последнем элементе самого масиива?
 const lastElemArray = [1, 2, 3, 4, 5];
-let lastEl = lastElemArray[lastElemArray.length -1];  // 5
+let lastEl = lastElemArray[lastElemArray.length - 1];  // 5
 lastEl = Math.floor(Math.random() * 10); // random in 5
 console.log(lastEl);
 

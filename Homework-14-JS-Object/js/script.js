@@ -277,9 +277,6 @@ const questions = [
     question: "Где находится храм Артемиды? Подсказка - \"Турция\"",
     answer: "Эфес",
   },
-
-
-
 ];
 
 function startTheGame() {
@@ -319,7 +316,7 @@ function calcCounter(val) {
 
 function watchWord(myWord) {
   if (!myWord.includes("_")) {
-    document.querySelector(".game-result").innerHTML = `Отлично было загаданно слово ${curentQuestion["answer"]}!`;
+    document.querySelector(".game-result").innerHTML = `Отлично было загаданно слово ${curentQuestion["answer"]} ${medal}!`;
     askInput.parentNode.removeChild(askInput);
   }
   if (counter === 0) {
