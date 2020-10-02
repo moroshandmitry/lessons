@@ -144,22 +144,98 @@ const arrayFill = (whatToDraw, howManyTimes) => {
 console.log(arrayFill("x", 5));
 
 // Task 16
-// Как решить 16. Дан массив с числами. Узнайте сколько элементов с начала массива надо сложить, чтобы в сумме получилось больше 10-ти.
-// reduce
+const sumArr = [1, 2, 3, 4, 5];
+for (let i = 0; i < sumArr.length; i++) {
+  const reducer = (accumulator, currentValue) => accumulator + currentValue;
+  const fullSum = sumArr.reduce(reducer);
+  if (fullSum === 10) {
+    console.log(`Сумма ${sumArr.length} элементов массива равна ${fullSum}`);
+  }
+  else if (fullSum === 15) {
+    console.log(`Сумма ${sumArr.length} элементов массива равна ${fullSum}`);
+  }
+  else {
+    console.log(`${sumArr.length} элементов содержит массив`);
+  }
+}
 
 // Task 17
-// а можно сделать, чтоб рандом был в последнем элементе самого масиива?
-const lastElemArray = [1, 2, 3, 4, 5];
-let lastEl = lastElemArray[lastElemArray.length - 1];  // 5
-lastEl = Math.floor(Math.random() * 10); // random in 5
-console.log(lastEl);
+const lastElemArray = [1, 2, 3, 4, 'n'];
+let lastEl = lastElemArray[lastElemArray.length - 1];  // n
+lastEl = Math.floor(Math.random() * 10); // random in last elem
+console.log(`${lastEl} - LAST ELEMENT RANDOM`);
+
+// Task 18
+for (let i=1; i<10; i++) {
+  for (let j=1; j<10; j++) {
+    console.log(i*j);
+  }
+}
+
+// Task 19
+let simpleArr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+let reverseArr = [];
+
+for (let i = 0; i < simpleArr.length - 1; i++) {
+  reverseArr[i] = simpleArr[simpleArr.length - i];
+  // reverseArr.push(simpleArr[simpleArr.length - 1 - i]);
+}
+/*
+for (let i = 0; i < 9 - 1; i++) {
+  reverseArr[0] = simpleArr[8 - 0]) // 8; i = 0;
+  reverseArr[1] = simpleArr[8 - 1]) // 7; i = 1;
+  reverseArr[2] = simpleArr[8 - 2]) // 6; i = 2;
+  reverseArr[3] = simpleArr[8 - 3]) // 5; i = 3;
+  reverseArr[4] = simpleArr[8 - 4]) // 4; i = 4;
+  reverseArr[5] = simpleArr[8 - 5]) // 3; i = 5;
+  reverseArr[6] = simpleArr[8 - 6]) // 2; i = 6;
+  reverseArr[7] = simpleArr[8 - 7]) // 1; i = 7;
+  reverseArr[8] = simpleArr[8 - 8]) // 0; i = 8;
+*/
+console.log(reverseArr);
+console.log(simpleArr.reverse());
+
+// Task 20
+const sumNeastedArr = [
+  [2, 4, 7],
+  [3, 2, 6],
+  [8, 5, 1]
+];
+const sumFlat = sumNeastedArr.flat();
+const sumReducer = (accumulator, currentValue) => accumulator + currentValue;
+const resultSum = sumFlat.reduce(sumReducer);
+console.log(`${resultSum} - result of neasted array`);
 
 
-// const sumArr = [1, 2, 3, 4, 5];
-// for (let i = 0; i < sumArr.length; i++) {
-//   const reducer = (accumulator, currentValue) => accumulator + currentValue;
-//   console.log(sumArr.reduce(reducer));
-// }
+
+// Task 22
+let numArray = [1, 2, 3, 4, 5, 6, 7, 0, -7, -6, -5, -4, -3, -2, -1];
+let posNeuNeg = numArray.filter(positiveNeutralNegative);
+
+function positiveNeutralNegative(number) {
+  if (number >= 1) {
+    console.log(`Number ${number} is posivive`);
+  }
+  else if (number === 0) {
+    console.log(`Number ${number} is neutral`);
+  }
+  else {
+    console.log(`Number ${number} is negative`);
+  }
+}
+
+// Task 24
+const whoOnline = {
+  Alan: { online: false },
+  Jeff: { online: true },
+  Sarah: { online: false },
+}
+console.log(whoOnline.Alan);
+console.log(whoOnline.Jeff);
+console.log(whoOnline.Sarah);
+console.log(whoOnline.Alan.online);
+console.log(whoOnline.Jeff.online);
+console.log(whoOnline.Sarah.online);
 
 
 // const aStr = "AAaBbbbBBCaaDD"; // need 2AaB3b2BC2a2D
@@ -172,3 +248,18 @@ console.log(lastEl);
 //     console.log(x + aStr.charAt(2));
 //   }
 // }
+
+// Task 21
+//let one = digit.toString().match(/.{1,1}/g)
+
+const getDigitsSum = (digit) => { 
+  let one = digit.toString().split(""); // в строке нет пробела поэтому разделит посимвольно
+  console.log(one); // [ "1", "0" ]
+
+  const red = (accumulator, currentValue) => accumulator + currentValue;
+  console.log(one.reduce(red)); // 10
+
+}
+getDigitsSum(10);
+
+
