@@ -166,31 +166,30 @@ lastEl = Math.floor(Math.random() * 10); // random in last elem
 console.log(`${lastEl} - LAST ELEMENT RANDOM`);
 
 // Task 18
-for (let i=1; i<10; i++) {
-  for (let j=1; j<10; j++) {
-    console.log(i*j);
+for (let i = 1; i < 10; i++) {
+  for (let j = 1; j < 10; j++) {
+    console.log(i * j);
   }
 }
 
 // Task 19
 let simpleArr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 let reverseArr = [];
-
-for (let i = 0; i < simpleArr.length - 1; i++) {
-  reverseArr[i] = simpleArr[simpleArr.length - i];
+for (let i = 0; i < simpleArr.length; i++) {
+  reverseArr[i] = simpleArr[simpleArr.length - 1 - i];
   // reverseArr.push(simpleArr[simpleArr.length - 1 - i]);
 }
 /*
 for (let i = 0; i < 9 - 1; i++) {
-  reverseArr[0] = simpleArr[8 - 0]) // 8; i = 0;
-  reverseArr[1] = simpleArr[8 - 1]) // 7; i = 1;
-  reverseArr[2] = simpleArr[8 - 2]) // 6; i = 2;
-  reverseArr[3] = simpleArr[8 - 3]) // 5; i = 3;
-  reverseArr[4] = simpleArr[8 - 4]) // 4; i = 4;
-  reverseArr[5] = simpleArr[8 - 5]) // 3; i = 5;
-  reverseArr[6] = simpleArr[8 - 6]) // 2; i = 6;
-  reverseArr[7] = simpleArr[8 - 7]) // 1; i = 7;
-  reverseArr[8] = simpleArr[8 - 8]) // 0; i = 8;
+  reverseArr[0] = simpleArr[9 - 1 - 0]) // 8; i = 0;
+  reverseArr[1] = simpleArr[9 - 1 - 1]) // 7; i = 1;
+  reverseArr[2] = simpleArr[9 - 1 - 2]) // 6; i = 2;
+  reverseArr[3] = simpleArr[9 - 1 - 3]) // 5; i = 3;
+  reverseArr[4] = simpleArr[9 - 1 - 4]) // 4; i = 4;
+  reverseArr[5] = simpleArr[9 - 1 - 5]) // 3; i = 5;
+  reverseArr[6] = simpleArr[9 - 1 - 6]) // 2; i = 6;
+  reverseArr[7] = simpleArr[9 - 1 - 7]) // 1; i = 7;
+  reverseArr[8] = simpleArr[9 - 1 - 8]) // 0; i = 8;
 */
 console.log(reverseArr);
 console.log(simpleArr.reverse());
@@ -206,7 +205,19 @@ const sumReducer = (accumulator, currentValue) => accumulator + currentValue;
 const resultSum = sumFlat.reduce(sumReducer);
 console.log(`${resultSum} - result of neasted array`);
 
-
+// Task 21
+const getDigitsSum = (digit) => {
+  // в строке нет пробела поэтому разделит посимвольно
+  let arr = digit.toString().split(""); // ["1", "0"];
+  // accumulator, currentValue - строки их надо в число преобразовать
+  let reducer = (accumulator, currentValue) => +accumulator + +currentValue;
+  // ["1", "0"] => [1, 2]
+  let sumArr = arr.reduce(reducer);
+  return sumArr;
+}
+console.log(getDigitsSum(10));
+console.log(getDigitsSum(22));
+console.log(getDigitsSum(33));
 
 // Task 22
 let numArray = [1, 2, 3, 4, 5, 6, 7, 0, -7, -6, -5, -4, -3, -2, -1];
@@ -252,14 +263,6 @@ console.log(whoOnline.Sarah.online);
 // Task 21
 //let one = digit.toString().match(/.{1,1}/g)
 
-const getDigitsSum = (digit) => { 
-  let one = digit.toString().split(""); // в строке нет пробела поэтому разделит посимвольно
-  console.log(one); // [ "1", "0" ]
 
-  const red = (accumulator, currentValue) => accumulator + currentValue;
-  console.log(one.reduce(red)); // 10
-
-}
-getDigitsSum(10);
 
 
