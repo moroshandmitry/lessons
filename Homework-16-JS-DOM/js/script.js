@@ -46,11 +46,74 @@ if (list.matches(".list")) {
     let textnode = document.createTextNode("New LI");
     node.appendChild(textnode);
     list.appendChild(node);
-
-    // если нажали 5 раз на кнопку то сделать её disabled
   }
 
 }
 else {
   list.innerHTML = "This element does not match the \".list\" CSS selector";
 }
+
+console.log(`typeof 1 - ${typeof 1}`);
+console.log(`typeof "Hi" - ${typeof "Hi"}`);
+console.log(`typeof true - ${typeof true}`);
+console.log(`typeof Symbol("Hi") - ${typeof Symbol("Hi")}`);
+console.log(`typeof BigIng - ${typeof BigInt("99999999999999999999")}`);
+console.log(`typeof undefinedVariable - ${typeof undefinedVariable}`);
+console.log(`typeof function(){} - ${typeof function(){}}`);
+console.log(`typeof [] - ${typeof []}`);
+console.log(`typeof {} - ${typeof {}}`);
+console.log(`typeof null - ${typeof null}`);
+
+let x = 5; // 5
+let y = x; // 5 = 5
+y++ // 6
+console.log(x); // 5
+console.log(y); // 6
+
+// clone array
+let a = [1, 2, 3];
+let b = a; // link on array
+b.push(4); // [1, 2, 3, 4]
+console.log(a); // [1, 2, 3, 4]
+console.log(b); // [1, 2, 3, 4]
+console.log(a === b); // true
+
+// without mutation
+let c = [1, 2, 3];
+// method concat() or slice() without parameters return copy of array
+let d = c.concat(); // clone array in d = [1, 2, 3] + d.push(4) = [1, 2, 3, 4];
+d.push(4);
+console.log(c); // [1, 2, 3]
+console.log(d); // [1, 2, 3, 4]
+console.log(c === d); // false
+console.log(`typeof c = [1, 2, 3] => ${typeof c}`); // Object
+
+// scope - область видимости
+function funcA() {
+  let a  = 1;
+
+  function funcB() {
+    let b = 2;
+
+    function funcC() {
+      let c = 3;
+
+      console.log('funcC', a, b, c);
+    }
+    funcC();
+
+    console.log('funcB', a, b);
+  }
+  funcB();
+
+  console.log('funcA', a);
+}
+funcA();
+
+// LODASH
+// clone array
+const objects = [1, 2, 3];
+const deep = _.cloneDeep(objects);
+console.log(deep);
+
+// https://www.youtube.com/watch?v=M_pclb-58ZY&list=PLFxYEcXBH1n3VXRzBJeN5u1RpupciSQfJ&index=28
