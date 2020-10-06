@@ -59,7 +59,7 @@ console.log(`typeof true - ${typeof true}`);
 console.log(`typeof Symbol("Hi") - ${typeof Symbol("Hi")}`);
 console.log(`typeof BigIng - ${typeof BigInt("99999999999999999999")}`);
 console.log(`typeof undefinedVariable - ${typeof undefinedVariable}`);
-console.log(`typeof function(){} - ${typeof function(){}}`);
+console.log(`typeof function(){} - ${typeof function () { }}`);
 console.log(`typeof [] - ${typeof []}`);
 console.log(`typeof {} - ${typeof {}}`);
 console.log(`typeof null - ${typeof null}`);
@@ -90,7 +90,7 @@ console.log(`typeof c = [1, 2, 3] => ${typeof c}`); // Object
 
 // scope - область видимости
 function funcA() {
-  let a  = 1;
+  let a = 1;
 
   function funcB() {
     let b = 2;
