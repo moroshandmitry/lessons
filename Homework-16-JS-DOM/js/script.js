@@ -19,17 +19,19 @@ console.log(navigator.userAgent);
 console.log(navigator.product);
 console.log(location.href);
 
-document.querySelector(".tecnology").addEventListener("mouseover", mouseOver);
+const tecnology = document.querySelector(".tecnology");
+
+tecnology.addEventListener("mouseover", mouseOver);
+
 function mouseOver() {
-  document.querySelector(".tecnology").style.color = "red";
+  tecnology.style.color = "red";
 }
 
-// document.querySelector(".tecnology").addEventListener("mouseout", mouseOut);
-// function mouseOut() {
-//   document.getElementById(".tecnology").style.color = "";
-// }
+tecnology.addEventListener("mouseout", mouseOut);
 
-
+function mouseOut() {
+  tecnology.style.color = "";
+}
 
 const list = document.querySelector(".list");
 // matches = совпадения
