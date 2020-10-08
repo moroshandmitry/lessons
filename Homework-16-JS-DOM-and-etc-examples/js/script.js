@@ -19,6 +19,13 @@ console.log(navigator.userAgent);
 console.log(navigator.product);
 console.log(location.href);
 
+console.log(document.getElementsByTagName('a')) // HTMLCollection { 0: a, 1: a, length: 2 }
+
+const getTagA = document.getElementsByTagName('a')[0] // <a href="https://google.github.io/styleguide/jsguide.html" target="_blank">
+const getAttrA = getTagA.getAttribute('href') // https://google.github.io/styleguide/jsguide.html
+console.log(getTagA)
+console.log(getAttrA)
+
 const tecnology = document.querySelector(".tecnology");
 
 tecnology.addEventListener("mouseover", mouseOver);
@@ -52,6 +59,19 @@ if (list.matches(".list")) {
 else {
   list.innerHTML = "This element does not match the \".list\" CSS selector";
 }
+
+const elementsLi = document.getElementsByTagName('LI')
+for (let i = 0; i < elementsLi.length; i++) {
+  // console.log(elementsLi[i].tagName)
+  console.log(elementsLi[i].previousSibling.nextSibling)
+  
+  if(elementsLi[i].nodeType === 1) {
+    console.log('Это узел элемента')
+  }
+}
+
+//[...elementsLi].forEach(item => {console.log(item.parentNode)}) // 4 UL
+
 
 console.log(`typeof 1 - ${typeof 1}`);
 console.log(`typeof NaN - ${typeof NaN}`);
