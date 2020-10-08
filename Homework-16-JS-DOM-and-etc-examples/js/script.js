@@ -65,6 +65,25 @@ console.log(`typeof [] - ${typeof []}`);
 console.log(`typeof {} - ${typeof {}}`);
 console.log(`typeof null - ${typeof null}`);
 
+// Clone array
+const myArray = ['will', 'love']
+const data = ['You', ...myArray, 'spread', 'operator']
+const dataOne = [...myArray]
+const copy = myArray;
+
+console.log(data) // ['You', 'will', 'love', 'spread', 'operator']
+console.log(dataOne) // ['will', 'love']
+
+console.log(myArray === dataOne) // false
+console.log(myArray === copy) // true
+
+
+// LODASH
+// clone array
+const objects = [1, 2, 3]
+const deep = _.cloneDeep(objects)
+console.log(deep)
+
 let x = 5; // 5
 let y = x; // 5 = 5
 y++ // 6
@@ -184,6 +203,7 @@ helloToDmitry() // console.log in func // Hello Dmitry
 console.log(helloToMax) // sayHelloTo() => function
 
 console.log(helloToMax()) // undefined
+
 /*
 Not return nothing
 
@@ -213,7 +233,7 @@ manager.print() // Angular React
 manager.add("VueJS")
 manager.print() // Angular React VueJS
 
-// closures = замыкания 3
+// closures = замыкания 3 + asynchrony === ассинхронность
 const fib = [1, 2, 3, 5, 8, 13]
 
 for (let i = 0; i < fib.length; i++) {
@@ -246,26 +266,26 @@ resultOne
 resultOne[2]() // 2
 resultOne[4]() // 4
 
-// Context JS 1 = is not scope
+// Context is Object 1 = is not scope
 const person = {
   surname: "Stark",
   knows: function(what, name) {
     console.log(`You know ${what} about ${name} ${this.surname}`);
   }
 }
-const jon = { surname: "Snow"}
+const john = { surname: "Snow"}
 
 person.knows("all", "Bran")
-person.knows.call(jon, 'nothing', 'Jon')
-person.knows.apply(jon, ['nothing', 'Jon'])
+person.knows.call(john, 'nothing', 'John')
+person.knows.apply(john, ['nothing', 'John'])
 // spread operator ...
-person.knows.call(jon, ... ['nothing', 'Jon'])
-person.knows.bind(jon, 'nothing', 'Jon')()
+person.knows.call(john, ... ['nothing', 'John'])
+person.knows.bind(john, 'nothing', 'John')()
 
-const bound = person.knows.bind(jon, 'nothing', 'Jon')()
+const bound = person.knows.bind(john, 'nothing', 'John')
 bound()
 
-//  Context JS 2 => ES5
+//  Context is Object => ES5 class
 function Person(name, age) {
   this.name = name
   this.age = age
@@ -273,13 +293,98 @@ function Person(name, age) {
   console.log(this);
 }
 // undefined because not call function
-const maxim = new Person('Maxim', 20) // { name: "Maxim", age: 20 }
+const maxim = new Person('Maxim', 27) // { name: "Maxim", age: 20 }
+const dmitry = new Person('Dmitry', 26) // { name: "Dmitry", age: 26 }
 
-// https://www.youtube.com/watch?v=M_pclb-58ZY&list=PLFxYEcXBH1n3VXRzBJeN5u1RpupciSQfJ&index=28
-// stoped this 1:11:11
+// explicit binding context = явная привязка контекста => this
+function logThis() {
+  console.log(this);
+}
+const newObj = { 
+  num: 42,
+  getNum: function(){ return console.log(this.num)}
+}
+newObj.getNum(this.getNum)
 
-// // LODASH
-// // clone array
-// const objects = [1, 2, 3]
-// const deep = _.cloneDeep(objects)
-// console.log(deep)
+logThis.apply(newObj.num)
+logThis.call(newObj.num)
+logThis.bind(newObj.num)()
+
+// implicit binding context = неявная привязка контекста => this
+const animal = {
+  legs: 4,
+  logThis: function() {
+    console.log(this)
+  }
+}
+
+animal.logThis()
+
+// arrow function
+function Cat(color) {
+  this.color = color
+  console.log('This', this); // <= need ;
+  ( () => console.log('Arrow this', this)  )()
+}
+
+new Cat('red')
+
+// about new
+function Cats(color, name) {
+  this.color = color
+  this.name = name
+}
+
+const cat = new Cats('black', 'cat')
+console.log(cat);
+
+// __proto__
+// ES5 => Object.getPrototypeOf()
+function Dogs(name, color) {
+  this.name = name
+  this.color = color
+}
+
+Dogs.prototype.voice = function() {
+  console.log(`Dog ${this.name} says woof`)
+}
+
+const dogs = new Dogs('Oladushek', 'white')
+
+console.log(Dogs.prototype) // { voice: voice(), … }
+console.log(dogs) // Object { name: "Oladushek", color: "white" }
+console.log(dogs.__proto__ === Dogs.prototype) // true
+console.log(dogs.constructor); // function Dogs(name, color)
+dogs.voice()
+
+// __proto__
+function Persons() {
+  Persons.prototype.legs = 2
+  Persons.prototype.skin = 'white'
+}
+const onePerson = new Persons()
+onePerson.name = 'Dmitry'
+
+console.log('skin' in  onePerson) // true
+console.log(onePerson.legs); // 2
+console.log(onePerson.name); // Dmitry
+
+console.log(onePerson.hasOwnProperty('name')); // true
+console.log(onePerson.hasOwnProperty('skin')); // false, because skin in prototype
+
+// Object.create()
+const proto = {year: 2020}
+const myYear = Object.create(proto)
+
+console.log(myYear.year) // 2020
+console.log(myYear.hasOwnProperty('year')) // false
+console.log(myYear.__proto__ === proto) // true
+
+// asynchrony === ассинхронность
+const first = () => console.log('First')
+const second = () => console.log('Second')
+const third = () => console.log('Third')
+
+first() // 1
+setTimeout(second, 0) // 3
+third() // 2
