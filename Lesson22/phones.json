@@ -1,0 +1,14 @@
+[
+    {
+        "model": "iphone",
+        "price": 1000
+    },
+    {
+        "model": "sm",
+        "price": 1000
+    },
+    {
+        "model": "hw",
+        "price": 1000
+    }
+]

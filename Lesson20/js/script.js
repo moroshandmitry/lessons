@@ -41,8 +41,6 @@ console.log(nodes);
 //   }
 // }
 
-console.log(document.getElementById("elem").innerHTML);
-console.log(elem.innerHTML);
 let collection = document.getElementsByTagName("div");
 console.log(collection.length);
 for (let i = 0; i < collection.length; i++) {
