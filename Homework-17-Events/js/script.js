@@ -10,3 +10,12 @@ setInterval(function () {
 
   document.querySelector(".time").innerHTML = `${hours}:${minutes}:${seconds}`;
 }, 1000);
+
+const btn = document.getElementById('btn')
+const text = document.getElementById('text')
+
+btn.addEventListener('click', getTextInConsole)
+
+function getTextInConsole() {
+  return console.log(text.value)
+}
