@@ -64,8 +64,8 @@ const elementsLi = document.getElementsByTagName('LI')
 for (let i = 0; i < elementsLi.length; i++) {
   // console.log(elementsLi[i].tagName)
   console.log(elementsLi[i].previousSibling.nextSibling)
-  
-  if(elementsLi[i].nodeType === 1) {
+
+  if (elementsLi[i].nodeType === 1) {
     console.log('Это узел элемента')
   }
 }
@@ -75,6 +75,7 @@ for (let i = 0; i < elementsLi.length; i++) {
 
 console.log(`typeof 1 - ${typeof 1}`);
 console.log(`typeof NaN - ${typeof NaN}`);
+console.log(`typeof NaN === NAN => false - ${typeof NaN === NaN}`);
 console.log(`typeof "Hi" - ${typeof "Hi"}`);
 console.log(`typeof true - ${typeof true}`);
 console.log(`typeof Symbol("Hi") - ${typeof Symbol("Hi")}`);
@@ -184,7 +185,7 @@ function sqare(num) {
 }
 
 // function expression 
-const sqareOne = function(numOne) {
+const sqareOne = function (numOne) {
   return numOne ** 2;
 }
 console.log(sqareOne(11)); // 121
@@ -209,7 +210,7 @@ console.log(obj) // { firstName: "Dmitry", lastName: "Moroshan" }
 function sayHelloTo(name) {
   const message = `Hello ${name}`
 
-  return function() {
+  return function () {
     console.log(message)
   }
 }
@@ -239,10 +240,10 @@ function createFrameworkManager() {
   const fw = ["Angular", "React"]
 
   return {
-    print: function() {
+    print: function () {
       console.log(fw.join(" "))
     },
-    add: function(framework) {
+    add: function (framework) {
       fw.push(framework)
     },
   }
@@ -258,18 +259,18 @@ const fib = [1, 2, 3, 5, 8, 13]
 
 for (let i = 0; i < fib.length; i++) {
 
-  setTimeout(function() {
+  setTimeout(function () {
     console.log(`fib ${i} = ${fib[i]}`);
   }, 1500)
-  
+
 }
 
 // closures = замыкания 4 iife = Imediate Invoked Function Expression
 let result = []
 for (let i = 0; i < 5; i++) {
-  result.push( function () {
+  result.push(function () {
     return i
-  } )
+  })
 }
 console.log(result)
 console.log(result[2]()) // 2
@@ -278,9 +279,9 @@ console.log(result[4]()) // 4
 // closures = замыкания 5 iife = Imediate Invoked Function Expression
 let resultOne = []
 for (let i = 0; i < 5; i++) {
-  resultOne.push( function () {
+  resultOne.push(function () {
     console.log(i);
-  } )
+  })
 }
 resultOne
 resultOne[2]() // 2
@@ -289,17 +290,17 @@ resultOne[4]() // 4
 // Context is Object 1 = is not scope
 const person = {
   surname: "Stark",
-  knows: function(what, name) {
+  knows: function (what, name) {
     console.log(`You know ${what} about ${name} ${this.surname}`);
   }
 }
-const john = { surname: "Snow"}
+const john = { surname: "Snow" }
 
 person.knows("all", "Bran")
 person.knows.call(john, 'nothing', 'John')
 person.knows.apply(john, ['nothing', 'John'])
 // spread operator ...
-person.knows.call(john, ... ['nothing', 'John'])
+person.knows.call(john, ...['nothing', 'John'])
 person.knows.bind(john, 'nothing', 'John')()
 
 const bound = person.knows.bind(john, 'nothing', 'John')
@@ -320,9 +321,9 @@ const dmitry = new Person('Dmitry', 26) // { name: "Dmitry", age: 26 }
 function logThis() {
   console.log(this);
 }
-const newObj = { 
+const newObj = {
   num: 42,
-  getNum: function(){ return console.log(this.num)}
+  getNum: function () { return console.log(this.num) }
 }
 newObj.getNum(this.getNum)
 
@@ -333,7 +334,7 @@ logThis.bind(newObj.num)()
 // implicit binding context = неявная привязка контекста => this
 const animal = {
   legs: 4,
-  logThis: function() {
+  logThis: function () {
     console.log(this)
   }
 }
@@ -344,7 +345,7 @@ animal.logThis()
 function Cat(color) {
   this.color = color
   console.log('This', this); // <= need ;
-  ( () => console.log('Arrow this', this)  )()
+  (() => console.log('Arrow this', this))()
 }
 
 new Cat('red')
@@ -365,7 +366,7 @@ function Dogs(name, color) {
   this.color = color
 }
 
-Dogs.prototype.voice = function() {
+Dogs.prototype.voice = function () {
   console.log(`Dog ${this.name} says woof`)
 }
 
@@ -385,7 +386,7 @@ function Persons() {
 const onePerson = new Persons()
 onePerson.name = 'Dmitry'
 
-console.log('skin' in  onePerson) // true
+console.log('skin' in onePerson) // true
 console.log(onePerson.legs); // 2
 console.log(onePerson.name); // Dmitry
 
@@ -393,7 +394,7 @@ console.log(onePerson.hasOwnProperty('name')); // true
 console.log(onePerson.hasOwnProperty('skin')); // false, because skin in prototype
 
 // Object.create()
-const proto = {year: 2020}
+const proto = { year: 2020 }
 const myYear = Object.create(proto)
 
 console.log(myYear.year) // 2020

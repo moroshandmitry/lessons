@@ -1,14 +1,14 @@
 // Time
 setInterval(function () {
-  const date = new Date();
-  let hours = date.getHours();
-  let minutes = date.getMinutes();
-  let seconds = date.getSeconds();
-  hours = hours < 10 ? `0${hours}` : `${hours}`;
-  minutes = minutes < 10 ? `0${minutes}` : `${minutes}`;
-  seconds = seconds < 10 ? `0${seconds}` : `${seconds}`;
+  const date = new Date()
+  let hours = date.getHours()
+  let minutes = date.getMinutes()
+  let seconds = date.getSeconds()
+  hours = hours < 10 ? `0${hours}` : `${hours}`
+  minutes = minutes < 10 ? `0${minutes}` : `${minutes}`
+  seconds = seconds < 10 ? `0${seconds}` : `${seconds}`
 
-  document.querySelector(".time").innerHTML = `${hours}:${minutes}:${seconds}`;
+  document.querySelector(".time").innerHTML = `${hours}:${minutes}:${seconds}`
 }, 1000);
 
 const btn = document.getElementById('btn')
@@ -22,13 +22,13 @@ function getTextInConsole() {
 }
 
 function getTextInput() {
-  return textInput.style.background = 'PaleTurquoise';
+  return textInput.style.background = 'PaleTurquoise'
 }
 
-let field = document.getElementById('field');
-let ball = document.getElementById('ball');
+let field = document.getElementById('field')
+let ball = document.getElementById('ball')
 
-field.addEventListener('click', football);
+field.addEventListener('click', football)
 
 function football(event) {
   // Получить стили getComputedStyle => ball from #ball но их нет в css, тогда возъми их из svg объекта мяча
@@ -37,43 +37,49 @@ function football(event) {
   // Получаем число
   // Обратиться к стилям мяча относительно левого и правого краёв и передать в них нужные координаты
 
-  const getBallStyles = getComputedStyle(ball);
+  const getBallStyles = getComputedStyle(ball)
 
-  console.log(`Получи объект стилей из svg мяча getComputedStyle(ball) ${getComputedStyle(ball)}`);
-  console.log(getComputedStyle(ball));
+  console.log(`Получи объект стилей из svg мяча getComputedStyle(ball) ${getComputedStyle(ball)}`)
+  console.log(getComputedStyle(ball))
 
-  const ballWidthWoPx = getBallStyles.width.slice(0, -2);
-  const ballDevWidthOnTwo = ballWidthWoPx / 2;
+  const ballWidthWoPx = getBallStyles.width.slice(0, -2)
+  const ballDevWidthOnTwo = ballWidthWoPx / 2
 
   console.log(`Возьми ширину мяча ${getBallStyles.width} === getBallStyles.width`)
   console.log(`Отреж => "px" от => ${getBallStyles.width} === getBallStyles.width => getBallStyles.width.slice(0, -2) === ${getBallStyles.width.slice(0, -2)}`)
   console.log(`Подели ширину мяча => ${ballWidthWoPx} === getBallStyles.width.slice(0, -2) => getBallStyles.width.slice(0, -2) / 2 === ${getBallStyles.width.slice(0, -2) / 2} чтобы определить нулевую точку координат у мяча`)
 
-  ball.style.marginLeft = (event.offsetX - ballDevWidthOnTwo) + 'px';
-  ball.style.marginTop = (event.offsetY - ballDevWidthOnTwo) + 'px';
+  ball.style.marginLeft = (event.offsetX - ballDevWidthOnTwo) + 'px'
+  ball.style.marginTop = (event.offsetY - ballDevWidthOnTwo) + 'px'
 
-  console.log(`ball.style.marginLeft = (event.offsetX - ballDevWidthOnTwo) + 'px'; Двигай мяч относительно левого края === ${ball.style.marginLeft = event.offsetX - ballDevWidthOnTwo} + 'px';`);
-  console.log(`ball.style.marginTop = (event.offsetX - ballDevWidthOnTwo) + 'px'; Двигай мяч относительно верхнего края === ${ball.style.marginLeft = event.offsetY - ballDevWidthOnTwo} + 'px';`);
+  console.log(`ball.style.marginLeft = (event.offsetX - ballDevWidthOnTwo) + 'px' Двигай мяч относительно левого края === ${ball.style.marginLeft = event.offsetX - ballDevWidthOnTwo} + 'px'`)
+  console.log(`ball.style.marginTop = (event.offsetX - ballDevWidthOnTwo) + 'px' Двигай мяч относительно верхнего края === ${ball.style.marginLeft = event.offsetY - ballDevWidthOnTwo} + 'px'`)
 
-  console.log(`Получи координаты поля без мяча event.offsetX === ${event.offsetX} => event.offsetY  === ${event.offsetY}`);
+  console.log(`Получи координаты поля без мяча event.offsetX === ${event.offsetX} => event.offsetY  === ${event.offsetY}`)
 
 }
 
+let myDropdown = document.querySelector("#myDropdown")
+let dropdowns = document.querySelector(".dropdown-content")
 
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
+console.log(myDropdown);
+console.log(dropdowns);
 
-// Close the dropdown if the user clicks outside of it
-window.onclick = function (e) {
-  if (!e.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
+myDropdown.addEventListener('click', myToggle)
+
+function myToggle(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    for (let i = 0; i < dropdowns.length; i++) {
+      let openDropdown = dropdowns[i]
+
       if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
+        openDropdown.classList.remove('show')
       }
     }
   }
+}
+
+function getToggleFunc() {
+  myDropdown.classList.toggle("show")
 }
