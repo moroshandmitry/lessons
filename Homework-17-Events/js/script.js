@@ -11,6 +11,7 @@ setInterval(function () {
   document.querySelector(".time").innerHTML = `${hours}:${minutes}:${seconds}`
 }, 1000);
 
+//  addEventListener to input
 const btn = document.getElementById('btn')
 const textInput = document.getElementById('text-input')
 
@@ -24,7 +25,9 @@ function getTextInConsole() {
 function getTextInput() {
   return textInput.style.background = 'PaleTurquoise'
 }
+//  addEventListener to input
 
+// football
 let field = document.getElementById('field')
 let ball = document.getElementById('ball')
 
@@ -58,20 +61,19 @@ function football(event) {
   console.log(`Получи координаты поля без мяча event.offsetX === ${event.offsetX} => event.offsetY  === ${event.offsetY}`)
 
 }
+// football
 
-let myDropdown = document.querySelector("#myDropdown")
-let dropdowns = document.querySelector(".dropdown-content")
+// toggle dropdown menu
+const toggleBtn =  document.querySelector(".dropbtn")
+const dropdownContent = document.querySelector(".dropdown-content")
 
-console.log(myDropdown);
-console.log(dropdowns);
-
-myDropdown.addEventListener('click', myToggle)
+dropdownContent.addEventListener('click', myToggle)
 
 function myToggle(event) {
   if (!event.target.matches('.dropbtn')) {
 
     for (let i = 0; i < dropdowns.length; i++) {
-      let openDropdown = dropdowns[i]
+      const openDropdown = dropdowns[i]
 
       if (openDropdown.classList.contains('show')) {
         openDropdown.classList.remove('show')
@@ -80,6 +82,33 @@ function myToggle(event) {
   }
 }
 
-function getToggleFunc() {
-  myDropdown.classList.toggle("show")
+toggleBtn.addEventListener('click', getToggleBtn)
+
+function getToggleBtn() {
+  dropdownContent.classList.toggle("show")
 }
+// toggle dropdown menu
+
+// color td in table
+const table = document.querySelector('table');
+
+table.addEventListener('click', colorTd)
+
+function colorTd (event) {
+  // if (event.target.tagName === 'TD') {
+  //   //event.target.classList.add('color')
+  // }
+  if (event.target.cellIndex === 0) {
+    event.target.style.background = 'red'
+  }
+  else if (event.target.cellIndex === 1) {
+    event.target.style.background = 'green'
+  }
+  else {
+    event.target.style.background = 'blue'
+  }
+  console.log(event.target) // show all targets
+  console.log(event.target.tagName ) // TD
+  console.log(event.target.classList); // DOMTokenList [ color ]
+}
+// color td in table
