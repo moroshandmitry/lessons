@@ -77,6 +77,18 @@
     </table>
     <!-- color td in table -->
 
+    <!-- form -->
+    <form action="app.php" method="get" onsubmit="const res = confirm('Send to server'); if(!res)return false">
+      <input type="text" name="txt1" id="txt1">
+      <input type="submit" value="Go">
+    </form>
+    <!-- form -->
+
+    <!-- event object -->
+    <input id="elemInput" class="btn btn-success" type="button" value="Show events (press => altKey || ctrlKey || shiftKey)">
+    <!-- event object -->
+
+
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js"

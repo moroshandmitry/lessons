@@ -112,3 +112,23 @@ function colorTd (event) {
   console.log(event.target.classList); // DOMTokenList [ color ]
 }
 // color td in table
+
+elemInput.addEventListener('click', function(event) {
+
+  console.log(event) // event object with propertys
+  console.log(event.type) // click
+  console.log(event.target) // input with propertys
+  console.log(event.target.tagName) // input
+
+  if (event.altKey && event.ctrlKey && event.shiftKey) {
+    console.log("Click with altKey + ctrlKey + shiftKey");
+  } else if (event.altKey === true) {
+    console.log("Click with altKey");
+  } else if (event.ctrlKey === !false) {
+    console.log("Click with ctrlKey");
+  }
+  else if (event.shiftKey !== false) {
+    console.log("Click with shiftKey");
+  }
+
+})
