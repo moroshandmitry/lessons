@@ -91,50 +91,89 @@ setInterval(function () {
 // console.log(animalGuepard) // Object { name: "Гепард", speed: 0 }
 // console.log(animalGuepard.run(120)) // Гепард бежит, со скоростью 120 км/ч
 
-const person = Object.create(
-  {
-    calculateAge() {
-      console.log('Age', new Date().getFullYear() - this.birthYear);
-    }
-  },
-  {
-    name: {
-      value: 'Dmitry',
-      enumerable: true, // to see this in for
-      writable: true, // to rename value
-      configurable: true // delete key in object
-    },
-    birthYear: {
-      value: 1993,
-      enumerable: false, // default
-      writable: false, // default
-      configurable: false // default
-    },
-    age: {
-      get() {
-        return new Date().getFullYear() - this.birthYear
-      },
-      set(value) {
-        document.body.style.background = '#646D7E'
-        console.log('Set age', value)
-      }
-    }
-  }
-)
-console.log(person) // Object { name: "Dmitry", … }
-person.name = 'Maxim'
+// const person = Object.create(
+//   {
+//     calculateAge() {
+//       console.log('Age', new Date().getFullYear() - this.birthYear);
+//     }
+//   },
+//   {
+//     name: {
+//       value: 'Dmitry',
+//       enumerable: true, // to see this in for
+//       writable: true, // to rename value
+//       configurable: true // delete key in object
+//     },
+//     birthYear: {
+//       value: 1993,
+//       enumerable: false, // default
+//       writable: false, // default
+//       configurable: false // default
+//     },
+//     age: {
+//       get() {
+//         return new Date().getFullYear() - this.birthYear
+//       },
+//       set(value) {
+//         document.body.style.background = '#646D7E'
+//         console.log('Set age', value)
+//       }
+//     }
+//   }
+// )
+// console.log(person) // Object { name: "Dmitry", … }
+// person.name = 'Maxim'
 
-delete person.name
-console.log(person) // Object { … } => birthYear: 1993
+// delete person.name
+// console.log(person) // Object { … } => birthYear: 1993
 
-console.log(person.age) // 27
+// console.log(person.age) // 27
 
-console.log(person.age = 100) // Set age 100 + background = 'red'
+// console.log(person.age = 100) // Set age 100 + background = 'red'
 
-person.calculateAge() // 27
+// person.calculateAge() // 27
 
-for (const key in person) {
-  if(person.hasOwnProperty(key)) {
-    console.log('Key', key, person[key]) // Key name Maxim
-  }
-}
+// for (const key in person) {
+//   if(person.hasOwnProperty(key)) {
+//     console.log('Key', key, person[key]) // Key name Maxim
+//   }
+// }
+
+// Объекты, прототипы, наследование
+// Цепочка наследования
+// a === родитель b
+// b === наследник a
+
+// b === родитель c
+// c === наследник b
+
+// a => b => c
+
+// const a = {
+//   text: 'Hello',
+//   color: 'red',
+//   show: function () {
+//     console.log(this.color)
+//   }
+// }
+
+// const b = {
+//   fontSize: '24px',
+//   __proto__: a
+// }
+
+// const c = {
+//   fontFamily: 'Veranda',
+//   __proto__: b
+// }
+
+// console.log(a) // Object { text: "Hello", color: "red", show: show() }
+// console.log(b) // Object { fontSize: "24px" } + <prototype>: { text: "Hello", color: "red", show: show() }
+// b.text = 'One' // One
+// b.color = 'green' // green
+// console.log(b.show())
+// console.log(a.show())
+// console.log(c) // Object { fontFamily: "Veranda" } + <prototype>: Object { fontSize: "24px", text: "One", color: "green" }
+
+// console.log(c.hasOwnProperty("fontFamily")) // true
+// console.log(c.hasOwnProperty("fontSize")) // false
