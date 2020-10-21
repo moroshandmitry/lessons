@@ -8,33 +8,16 @@
 
 const sum = (a, b) => a + b
 const cube = a => a ** 3
+const getPow = (a, b = 5) => a ** b
 
-// console.log(sum(41, 1))
-// console.log(cube(2))
+console.log(sum(41, 1))
+console.log(cube(2))
+console.log(getPow(2))
+console.log(getPow(2, 2))
 
-// setTimeout(() => console.log('After 1 second'), 1000)
+let getArr = [1, 2, 3, 4, 5, 6, 7]
 
-// Context
-function log() {
-  console.log(this)
-}
+setTimeout(() => console.log(getArr.map(item => item ** 2)), 1000)
 
-const arrowLog = () => console.log(this)
 
-const personOne = {
-  name: 'Elena',
-  age: 20,
-  log: log,
-  arrowLog: arrowLog,
-  delayLog: function() {
-    // const self = this
-    global.setTimeout(() => {
-      console.log(this.name + ' ' + this.age)
-    }, 500)
-  }
-}
-
-// console.log(global)
-// personOne.arrowLog()
-
-personOne.delayLog()
+setInterval(() => console.log(getArr.push(0)), 3000)
