@@ -15,26 +15,18 @@ const cube = a => a ** 3
 // setTimeout(() => console.log('After 1 second'), 1000)
 
 // Context
-function log() {
-  console.log(this)
-}
-
 const arrowLog = () => console.log(this)
 
 const personOne = {
   name: 'Elena',
   age: 20,
-  log: log,
   arrowLog: arrowLog,
   delayLog: function() {
     // const self = this
-    global.setTimeout(() => {
-      console.log(this.name + ' ' + this.age)
+    setTimeout(() => {
+      console.log(`${this.name} ${this.age}`)
     }, 500)
   }
 }
-
-// console.log(global)
-// personOne.arrowLog()
 
 personOne.delayLog()
