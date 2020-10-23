@@ -9,3 +9,17 @@ const arrInter = setInterval(() => {
     clearInterval(arrInter)
   }
 }, 1000)
+
+const btn1 = document.querySelector('.btn1')
+const btn2 = document.querySelector('.btn2')
+const modal = document.querySelector('.modal')
+
+function show() {
+  modal.style = "display: flex; justify-content: center; align-items: center;"
+  modal.innerHTML = "<h3>Lorem, ipsum dolor sit amet consectetur adipisicing.<h3>"
+}
+
+const hide = () => modal.style = "display: none"
+
+btn1.addEventListener('click', show)
+btn2.addEventListener('click', hide)

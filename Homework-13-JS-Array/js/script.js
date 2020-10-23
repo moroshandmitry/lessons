@@ -311,3 +311,14 @@ var anotherDinosaurs = [
 console.log(anotherDinosaurs[0]); // { name: "Тираннозавррекс", period: "Верхнемеловой" }
 console.log(anotherDinosaurs[0]["name"]); // Тираннозавр рекс
 console.log(anotherDinosaurs[1].period); // Верхнеюрский
+
+
+// slice() not changed array
+let sliceArr = [1, 2, 3, 4]
+let getSliceArr = sliceArr.slice(1,3)
+console.log(sliceArr) // [ 1, 2, 3, 4 ]
+
+// splice() => changed array
+let spliceArr = [1, 2, 3, 4]
+let getSpliceArr = spliceArr.splice(1,3)
+console.log(spliceArr) // [ 1 ]
