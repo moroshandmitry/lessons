@@ -11,8 +11,8 @@ class Person {
 
 const peoples = [
   new Person('Dmitry', 27),
-  new Person('Maxim', 16),
-  new Person('Bob', 16)
+  new Person('Maxim', .3),
+  new Person('Mariam', 20)
 ]
 
 console.log(peoples[0].name);
