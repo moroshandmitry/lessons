@@ -322,3 +322,54 @@ console.log(sliceArr) // [ 1, 2, 3, 4 ]
 let spliceArr = [1, 2, 3, 4]
 let getSpliceArr = spliceArr.splice(1,3)
 console.log(spliceArr) // [ 1 ]
+
+// filter()
+const items = [
+  {name: 'Bike', price: 100},
+  {name: 'TV', price: 200},
+  {name: 'ALBUM', price: 10},
+  {name: 'Book', price: 5},
+  {name: 'Phone', price: 500},
+  {name: 'Computer', price: 1000},
+  {name: 'Keyboard', price: 25}
+]
+
+const filtredItems = items.filter((item) => item.price <= 100)
+console.log(filtredItems)
+/**
+0: Object { name: "Bike", price: 100 }
+​
+1: Object { name: "ALBUM", price: 10 }
+​
+2: Object { name: "Book", price: 5 }
+​
+3: Object { name: "Keyboard", price: 25 }
+ */
+
+// map()
+const newItems = [
+  {name: 'Bike', price: 100},
+  {name: 'TV', price: 200},
+  {name: 'ALBUM', price: 10},
+  {name: 'Book', price: 5},
+  {name: 'Phone', price: 500},
+  {name: 'Computer', price: 1000},
+  {name: 'Keyboard', price: 25}
+]
+
+const mapItems = newItems.map((item) => item.name)
+console.log(mapItems) // Array(7) [ "Bike", "TV", "ALBUM", "Book", "Phone", "Computer", "Keyboard" ]
+
+// find()
+const findItems = [
+  {name: 'Bike', price: 100},
+  {name: 'TV', price: 200},
+  {name: 'ALBUM', price: 10},
+  {name: 'Book', price: 5},
+  {name: 'Phone', price: 500},
+  {name: 'Computer', price: 1000},
+  {name: 'Keyboard', price: 25},
+]
+
+const findItemPhone = findItems.find((item) => item.name === 'Phone')
+console.log(findItemPhone) // {name: "Phone", price: 500}
