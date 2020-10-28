@@ -11,6 +11,7 @@ setInterval(function () {
   document.querySelector(".time").innerHTML = `${hours}:${minutes}:${seconds}`
 }, 1000)
 
+
 const people = [
   { name: 'Дмитрий', age: 27, budget: 40000.25 },
   { name: 'Мариам', age: 20, budget: 20000.25 },

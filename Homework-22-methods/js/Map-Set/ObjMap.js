@@ -12,14 +12,18 @@ const personObj = {
 }
  */
 
-const map =  new Map(personArr)
+
+// ========================
+const map = new Map(personArr)
 
 console.log(map)
-console.log((personObj.job  === map.get('job')) ? map.get('job') : false)
+console.log((personObj.job === map.get('job')) ? map.get('job') : false)
+// ========================
+
 
 // map
-//     .set('newField', 42)
-//     .set(personObj, 'Value of object')
+//   .set('newField', 42)
+//   .set(personObj, 'Value of object')
 // console.log(map.get(personObj))
 
 // map.delete('job')
@@ -28,29 +32,67 @@ console.log((personObj.job  === map.get('job')) ? map.get('job') : false)
 // map.clear()
 // console.log(map.size)
 
-// //  for [key, value] of => like are personArr + ['newField', 42]
-// for (let [key, value] of map.entries()) {
-//     console.log(key, value)
-// }
-
 // // values()
 // for (let value of map.values()) {
-//     console.log(value)
+//   console.log(value)
 // }
 
 // // keys()
 // for (let value of map.keys()) {
-//     console.log(value)
+//   console.log(value)
 // }
 
-// map.forEach((val, key, map) => console.log(val, key, map) )
 
-const arrayFrom = Array.from(map)
+// ========================
+//  for [key, value] of => like are personArr + ['newField', 42]
+for (let [key, value] of map.entries()) {
+  console.log(key, value)
+}
+
+map.forEach((value, key) => console.log(key, value))
+// ========================
+
+
+// ========================
+const arrayFrom = Array.from(map) // map = new Map(personArr)
+console.log(arrayFrom)
+
+const arrayMap = [...map]
+console.log(arrayMap)
+// ========================
+
+
+// ========================
 const mapObj = Object.fromEntries(map.entries())
 console.log(mapObj)
+// ========================
 
-// const arrayMap = [...map]
-// console.log(arrayMap)
 
-// https://www.youtube.com/watch?v=mbcP3Oc0PjU
-// 17:09
+// ========================
+const users = [
+  { name: 'Maxim' },
+  { name: 'Dmitry' },
+  { name: 'Mariam' }
+]
+
+const visits = new Map()
+
+visits
+  .set(users[0], new Date())
+  .set(users[1], new Date(new Date().getTime() + 0 * 60))
+  .set(users[2], new Date(new Date().getTime() + 0 * 60))
+
+function lastVisit(user) {
+  return visits.get(user)
+}
+
+console.log(`${users[0].name} ${lastVisit(users[0])}`)
+console.log(`${users[1].name} ${lastVisit(users[1])}`)
+console.log(`${users[2].name} ${lastVisit(users[2])}`)
+// ========================
+
+
+console.log((map.has('job')) ? `${personObj.job} developer this is just the beginning for a wonderful career!` : false)
+console.log(map.has('job'))
+console.log(personObj.hasOwnProperty('job'))
+console.log(map.has('job') === personObj.hasOwnProperty('job'))
