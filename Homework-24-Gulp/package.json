@@ -1,0 +1,19 @@
+{
+  "name": "homework-24-gulp",
+  "version": "0.0.1",
+  "description": "My first Gulp!",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moroshandmitry/moroshandmitry.github.io.git"
+  },
+  "author": "Dmitry",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moroshandmitry/moroshandmitry.github.io/Homework-24-Gulp/issues"
+  },
+  "homepage": "https://github.com/moroshandmitry/moroshandmitry.github.io/Homework-24-Gulp/#readme"
+}
