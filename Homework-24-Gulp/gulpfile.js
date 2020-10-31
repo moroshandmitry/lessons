@@ -1,7 +1,9 @@
-let project_folder = 'dist';
-let source_folder = '#src';
+let project_folder = 'dist'; // result of project
+let source_folder = '#src'; // like are folder app for first folder in poject
 
 let path = {
+    // uploading processed files
+    // загрузка обработанных файлов
     build: {
         html: project_folder + '/',
         css: project_folder + '/css/',
@@ -9,6 +11,8 @@ let path = {
         img: project_folder + '/img/',
         fonts: project_folder + '/fonts/',
     },
+    // source files folder
+    // папка с исходными файлами
     src: {
         html: [source_folder + '/*.html', '!' + source_folder + '/_*.html'],
         css: source_folder + '/scss/style.scss',
@@ -16,15 +20,21 @@ let path = {
         img: source_folder + '/img/**/*.{jpg,png,svg,gif,ico,webp}',
         fonts: source_folder + '/fonts/*.ttf',
     },
+    // file paths that need to be listened to and executed
+    // пути к файлам поторые нужно прослушивать и выполнять
     watch: {
         html: source_folder + '/**/*.html',
         css: source_folder + '/scss/**/*.scss',
         js: source_folder + '/js/**/*.js',
         img: source_folder + '/img/**/*.{jpg,png,svg,gif,ico,webp}',
     },
+    // deleting the project folder every time we run gulp
+    // удаление папки проекта каждый раз когда запускаем gulp
     clean: './' + project_folder + '/'
 }
 
+// writing a script, after installing plugins we declare variables
+// написание сценария, после установки плагинов объявляем переменные
 let { src, dest } = require('gulp'),
     gulp = require('gulp'),
     browsersync = require('browser-sync').create(),
