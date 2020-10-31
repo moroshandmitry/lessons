@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/moroshandmitry/moroshandmitry.github.io/Homework-24-Gulp/issues"
   },
-  "homepage": "https://github.com/moroshandmitry/moroshandmitry.github.io/Homework-24-Gulp/#readme"
+  "homepage": "https://github.com/moroshandmitry/moroshandmitry.github.io/Homework-24-Gulp/#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
 }
