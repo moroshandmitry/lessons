@@ -1,15 +1,6 @@
 {
     "liveServer.settings.port": 5501,
     "editor.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace",
-<<<<<<< HEAD
-    "editor.fontSize": 15,
-    "editor.fontLigatures": true,
-    "terminal.integrated.fontSize": 14,
-    "terminal.integrated.lineHeight": 1,
-    "terminal.integrated.letterSpacing": 0,
-    "terminal.integrated.fontWeight": "normal",
-    "editor.formatOnSave": true,
-=======
     "editor.fontLigatures": "'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'zero', 'onum'",
     "workbench.colorTheme": "Monokai",
     "editor.fontSize": 12,
@@ -39,5 +30,4 @@
     "workbench.sideBar.location": "right",
     "explorer.confirmDelete": false,
     "javascript.updateImportsOnFileMove.enabled": "always",
->>>>>>> ef4ff889f2ceff827cdeacaaa47809cce19697c1
 }
