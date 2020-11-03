@@ -1,6 +1,11 @@
 {
     "liveServer.settings.port": 5501,
-    "editor.fontFamily": "Fira Code",
+    "editor.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace",
     "editor.fontSize": 15,
     "editor.fontLigatures": true,
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.lineHeight": 1,
+    "terminal.integrated.letterSpacing": 0,
+    "terminal.integrated.fontWeight": "normal",
+    "editor.formatOnSave": true,
 }
