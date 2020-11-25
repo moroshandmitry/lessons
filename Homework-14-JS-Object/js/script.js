@@ -376,3 +376,15 @@ function removeFirstChild() {
   list.removeChild(list.childNodes[0]);
 }
 // removeFirstChild
+
+// object destructuring
+const person = {
+  firstName: 'Maxim',
+  lastName: 'Moroshan',
+  months: 4 
+}
+
+const {firstName, lastName, months} = person;
+
+console.log(`first name is ${firstName} last name is ${lastName} months ${months}`)
+// object destructuring
