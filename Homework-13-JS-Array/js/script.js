@@ -1,5 +1,5 @@
 // Time
-setInterval(function(){
+setInterval(function () {
   const date = new Date();
   let hours = date.getHours();
   let minutes = date.getMinutes();
@@ -8,7 +8,7 @@ setInterval(function(){
   minutes = (minutes < 10) ? `0${minutes}` : `${minutes}`;
   seconds = (seconds < 10) ? `0${seconds}` : `${seconds}`;
 
-document.querySelector(".time").innerHTML = `${hours}:${minutes}:${seconds}`;  
+  document.querySelector(".time").innerHTML = `${hours}:${minutes}:${seconds}`;
 }, 1000);
 
 // Elements of array
@@ -46,20 +46,20 @@ const matrix = [
   [1, 2, 3],
   [4, 5, 6],
   [7, 8, 9]
-  ];
+];
 console.log(matrix[1][1]); //5
 console.log(matrix[2][0]); //7
 
 // Create array with cycle for
 const count = 3;
 const createElemArray = new Array();
-for(let i = 0; i < count; i++) {
+for (let i = 0; i < count; i++) {
   createElemArray.push(i);
 }
 console.log(createElemArray);
 
 // Sum of matrixAray
-const  matrixAray = [
+const matrixAray = [
   [1, 2, 3],
   [4, 5, 6],
   [7, 8, 9]
@@ -130,7 +130,7 @@ console.log(myString.reverse().join()); // javascript,css,html
 
 // forEach()
 const newArray = ['html', 'css', 'javascript'];
-newArray.forEach(function(item, i, newArray) {
+newArray.forEach(function (item, i, newArray) {
   console.log(`${i}: ${item} (массив: ${newArray})`);
   console.log(`${i}: ${item}`);
   console.log(`${item}`);
@@ -194,11 +194,11 @@ console.log(a == b); // true
 const newAge = 11;
 const accompanied = true;
 if (newAge > 12) {
-    console.log('Go!');
+  console.log('Go!');
 } else if (newAge < 12 || accompanied) {
-    console.log('Go with parents!');
+  console.log('Go with parents!');
 } else {
-    console.log('Sorry no!');
+  console.log('Sorry no!');
 }
 
 // show that it's empty
@@ -206,7 +206,7 @@ const myNullVariable = null;
 myNullVariable;
 
 // I can change values in const, but I can't overwrite dinosaurs because is a - const = ['new', 'array'];
-const dinosaurs = ["Тираннозавр",  "Велоцираптор",  "Стегозавр",  "Трицератопс",  "Брахиозавр",  "Птеранодон",  "Апатозавр",  "Диплодок"];
+const dinosaurs = ["Тираннозавр", "Велоцираптор", "Стегозавр", "Трицератопс", "Брахиозавр", "Птеранодон", "Апатозавр", "Диплодок"];
 dinosaurs[0] = "Тираннозавр Рекс";
 dinosaurs.pop(); // delete Диплодок in last element
 dinosaurs.push("Компсогнат"); // add Компсогнат in last element
@@ -280,7 +280,7 @@ const anotherRandomInsult = ["У тебя", randomBodyPart, "словно", rand
 console.log(anotherRandomInsult);
 
 // join() - Number more than
-const numArr = [3,2,1];
+const numArr = [3, 2, 1];
 console.log(numArr.join(" больше, чем "));
 
 // SIMPLE OBJECTS
@@ -303,7 +303,7 @@ dog["color"] = "белый";
 console.log(dog); // { legs: 4, age: 1, name: "Оладушек", color: "белый" }
 
 // Array objects
-var anotherDinosaurs = [  
+var anotherDinosaurs = [
   { name: "Тираннозавр рекс", period: "Верхнемеловой" },
   { name: "Стегозавр", period: "Верхнеюрский" },
   { name: "Платеозавр", period: "Триасовый" }
@@ -315,23 +315,23 @@ console.log(anotherDinosaurs[1].period); // Верхнеюрский
 
 // slice() not changed array
 let sliceArr = [1, 2, 3, 4]
-let getSliceArr = sliceArr.slice(1,3)
+let getSliceArr = sliceArr.slice(1, 3)
 console.log(sliceArr) // [ 1, 2, 3, 4 ]
 
 // splice() => changed array
 let spliceArr = [1, 2, 3, 4]
-let getSpliceArr = spliceArr.splice(1,3)
+let getSpliceArr = spliceArr.splice(1, 3)
 console.log(spliceArr) // [ 1 ]
 
 // filter()
 const items = [
-  {name: 'Bike', price: 100},
-  {name: 'TV', price: 200},
-  {name: 'ALBUM', price: 10},
-  {name: 'Book', price: 5},
-  {name: 'Phone', price: 500},
-  {name: 'Computer', price: 1000},
-  {name: 'Keyboard', price: 25}
+  { name: 'Bike', price: 100 },
+  { name: 'TV', price: 200 },
+  { name: 'ALBUM', price: 10 },
+  { name: 'Book', price: 5 },
+  { name: 'Phone', price: 500 },
+  { name: 'Computer', price: 1000 },
+  { name: 'Keyboard', price: 25 }
 ]
 
 const filtredItems = items.filter((item) => item.price <= 100)
@@ -348,13 +348,13 @@ console.log(filtredItems)
 
 // map()
 const newItems = [
-  {name: 'Bike', price: 100},
-  {name: 'TV', price: 200},
-  {name: 'ALBUM', price: 10},
-  {name: 'Book', price: 5},
-  {name: 'Phone', price: 500},
-  {name: 'Computer', price: 1000},
-  {name: 'Keyboard', price: 25}
+  { name: 'Bike', price: 100 },
+  { name: 'TV', price: 200 },
+  { name: 'ALBUM', price: 10 },
+  { name: 'Book', price: 5 },
+  { name: 'Phone', price: 500 },
+  { name: 'Computer', price: 1000 },
+  { name: 'Keyboard', price: 25 }
 ]
 
 const mapItems = newItems.map((item) => item.name)
@@ -362,13 +362,13 @@ console.log(mapItems) // Array(7) [ "Bike", "TV", "ALBUM", "Book", "Phone", "Com
 
 // find()
 const findItems = [
-  {name: 'Bike', price: 100},
-  {name: 'TV', price: 200},
-  {name: 'ALBUM', price: 10},
-  {name: 'Book', price: 5},
-  {name: 'Phone', price: 500},
-  {name: 'Computer', price: 1000},
-  {name: 'Keyboard', price: 25},
+  { name: 'Bike', price: 100 },
+  { name: 'TV', price: 200 },
+  { name: 'ALBUM', price: 10 },
+  { name: 'Book', price: 5 },
+  { name: 'Phone', price: 500 },
+  { name: 'Computer', price: 1000 },
+  { name: 'Keyboard', price: 25 },
 ]
 
 const findItemPhone = findItems.find((item) => item.name === 'Phone')
