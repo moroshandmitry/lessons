@@ -96,7 +96,7 @@ console.log(scores);
 // How to extract the number 123 from this object with one line of JavaScript code? Test your solution by running it in the console.
 const myCrazyObject = {
   name: "Нелепый объект",
-  "some array": [7, 9, { purpose: "путаница", number: 123, }, 3.3,],
+  "some array": [7, 9, { purpose: "путаница", number: 123 }, 3.3],
   "random animal": "Банановая акула",
 };
 console.log(myCrazyObject["some array"][2].number); // 123
@@ -242,27 +242,31 @@ let counter = 10;
 
 const questions = [
   {
-    question: "Человеческие способности довольно велики. Например, мы можем собственными силами разогнать воздушный поток до 150–170 км/ч. В процессе чего человек способен произвести такой воздушный поток?",
+    question:
+      "Человеческие способности довольно велики. Например, мы можем собственными силами разогнать воздушный поток до 150–170 км/ч. В процессе чего человек способен произвести такой воздушный поток?",
     answer: "Чихание",
   },
   {
-    question: "Как называется остров где располагается статуя Свободы? Подсказка - \"США\"",
+    question:
+      'Как называется остров где располагается статуя Свободы? Подсказка - "США"',
     answer: "Свободы",
   },
   {
-    question: "Где находится пирамида Хеопса и большой Сфинкс? Подсказка - \"Египед\"",
+    question:
+      'Где находится пирамида Хеопса и большой Сфинкс? Подсказка - "Египед"',
     answer: "Гиза",
   },
   {
-    question: "Где находится колицей? Подсказка - \"Италия\"",
+    question: 'Где находится колицей? Подсказка - "Италия"',
     answer: "Рим",
   },
   {
-    question: "Где находится Тадж-Махал? Подсказка - \"Индия\"",
+    question: 'Где находится Тадж-Махал? Подсказка - "Индия"',
     answer: "Агра",
   },
   {
-    question: "Как называется королевство где находится Стоунхендж? Подсказка - \"Великобритания\"",
+    question:
+      'Как называется королевство где находится Стоунхендж? Подсказка - "Великобритания"',
     answer: "Уилтшир",
   },
   {
@@ -270,11 +274,11 @@ const questions = [
     answer: "Вавилон",
   },
   {
-    question: "Где находится статуя Зевса? Подсказка - \"Греция\"",
+    question: 'Где находится статуя Зевса? Подсказка - "Греция"',
     answer: "Олимпия",
   },
   {
-    question: "Где находится храм Артемиды? Подсказка - \"Турция\"",
+    question: 'Где находится храм Артемиды? Подсказка - "Турция"',
     answer: "Эфес",
   },
 ];
@@ -288,19 +292,22 @@ function startTheGame() {
 
 function typeLetter(e) {
   if (e.data) {
-    calcCounter(e.data)
+    calcCounter(e.data);
     letters.push(e.data);
   }
   findTheWord();
 }
 
 function findTheWord() {
-  const wordArray = curentQuestion["answer"].split("").map((item) => {
-    const newItem = letters.find(
-      (ltr) => ltr.toLowerCase() === item.toLowerCase()
-    );
-    return newItem || "__";
-  }).join(" ");
+  const wordArray = curentQuestion["answer"]
+    .split("")
+    .map((item) => {
+      const newItem = letters.find(
+        (ltr) => ltr.toLowerCase() === item.toLowerCase()
+      );
+      return newItem || "__";
+    })
+    .join(" ");
   watchWord(wordArray);
   document.querySelector(".letters").innerHTML = wordArray;
 }
@@ -309,14 +316,16 @@ function calcCounter(val) {
   if (!curentQuestion["answer"].includes(val)) {
     --counter;
     tries.innerHTML = `У Вас осталось ${counter} попыток!`;
-  } else if (letters.find(item => item === val)) {
+  } else if (letters.find((item) => item === val)) {
     tries.innerHTML = `Вы уже писали эту букву! У Вас осталось "${counter}" попыток!`;
   }
 }
 
 function watchWord(myWord) {
   if (!myWord.includes("_")) {
-    document.querySelector(".game-result").innerHTML = `Отлично было загаданно слово ${curentQuestion["answer"]} ${medal}!`;
+    document.querySelector(
+      ".game-result"
+    ).innerHTML = `Отлично было загаданно слово ${curentQuestion["answer"]} ${medal}!`;
     askInput.parentNode.removeChild(askInput);
   }
   if (counter === 0) {
@@ -337,12 +346,12 @@ printMultipleTimes(5, "=^.^=");
 
 // objects transmitted by links
 const human = {
-  firstName: 'DMITRY',
-  lastName: 'MOROSHAN',
+  firstName: "DMITRY",
+  lastName: "MOROSHAN",
   getFullName: function () {
-    return `${this.firstName} ${this.lastName}`
-  }
-}
+    return `${this.firstName} ${this.lastName}`;
+  },
+};
 
 console.log(human.age || human.getFullName()); // // DMITRY MOROSHAN (property age isn't exist)
 // create property in human
@@ -357,7 +366,9 @@ console.log(`${human.getFullName()} ${human.age}`); // Dmitry Moroshan 26 years
 const xHuman = human;
 // delete human.age
 delete xHuman.age;
-console.log(`value of age is "undefined" because it was deleted  - ${xHuman.age}`); // undefined
+console.log(
+  `value of age is "undefined" because it was deleted  - ${xHuman.age}`
+); // undefined
 // check property in object
 console.log("firstName" in human); // true
 console.log("age" in human); // false because it was deleted
@@ -379,12 +390,14 @@ function removeFirstChild() {
 
 // object destructuring
 const person = {
-  firstName: 'Maxim',
-  lastName: 'Moroshan',
-  months: 4 
-}
+  firstName: "Maxim",
+  lastName: "Moroshan",
+  months: 4,
+};
 
-const {firstName, lastName, months} = person;
+const { firstName, lastName, months } = person;
 
-console.log(`first name is ${firstName} last name is ${lastName} months ${months}`)
+console.log(
+  `first name is ${firstName} last name is ${lastName} months ${months}`
+);
 // object destructuring
